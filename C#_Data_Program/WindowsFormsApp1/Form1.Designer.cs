@@ -29,13 +29,228 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.systemNameInput = new System.Windows.Forms.Label();
+            this.modelInput = new System.Windows.Forms.Label();
+            this.manufacturerInput = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.motherboardTypeInput = new System.Windows.Forms.Label();
+            this.ipAddressInput = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(34, 413);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add to Database\r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(649, 413);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(139, 33);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Check Hardware";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(198, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(425, 53);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Data Retrieval Program";
+            // 
+            // systemNameInput
+            // 
+            this.systemNameInput.AutoSize = true;
+            this.systemNameInput.Location = new System.Drawing.Point(30, 113);
+            this.systemNameInput.Name = "systemNameInput";
+            this.systemNameInput.Size = new System.Drawing.Size(51, 20);
+            this.systemNameInput.TabIndex = 5;
+            this.systemNameInput.Text = "label1";
+            // 
+            // modelInput
+            // 
+            this.modelInput.AutoSize = true;
+            this.modelInput.Location = new System.Drawing.Point(236, 113);
+            this.modelInput.Name = "modelInput";
+            this.modelInput.Size = new System.Drawing.Size(51, 20);
+            this.modelInput.TabIndex = 6;
+            this.modelInput.Text = "label2";
+            // 
+            // manufacturerInput
+            // 
+            this.manufacturerInput.AutoSize = true;
+            this.manufacturerInput.Location = new System.Drawing.Point(397, 113);
+            this.manufacturerInput.Name = "manufacturerInput";
+            this.manufacturerInput.Size = new System.Drawing.Size(51, 20);
+            this.manufacturerInput.TabIndex = 7;
+            this.manufacturerInput.Text = "label3";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(34, 353);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // motherboardTypeInput
+            // 
+            this.motherboardTypeInput.AutoSize = true;
+            this.motherboardTypeInput.Location = new System.Drawing.Point(588, 113);
+            this.motherboardTypeInput.Name = "motherboardTypeInput";
+            this.motherboardTypeInput.Size = new System.Drawing.Size(51, 20);
+            this.motherboardTypeInput.TabIndex = 9;
+            this.motherboardTypeInput.Text = "label4";
+            this.motherboardTypeInput.Click += new System.EventHandler(this.motherboardTypeInput_Click);
+            // 
+            // ipAddressInput
+            // 
+            this.ipAddressInput.AutoSize = true;
+            this.ipAddressInput.Location = new System.Drawing.Point(30, 189);
+            this.ipAddressInput.Name = "ipAddressInput";
+            this.ipAddressInput.Size = new System.Drawing.Size(51, 20);
+            this.ipAddressInput.TabIndex = 15;
+            this.ipAddressInput.Text = "label5";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(519, 277);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(269, 102);
+            this.textBox7.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 93);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "System Name - Header";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(236, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(118, 20);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Model - Header";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(397, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(170, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Manufacturer - Header";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(588, 93);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(200, 20);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Motherboard type - Header";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(30, 169);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(153, 20);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "IP Address - Header";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(30, 330);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(181, 20);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Purchase Date - Header";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(515, 256);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(151, 20);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Extra Data - Header";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.ipAddressInput);
+            this.Controls.Add(this.motherboardTypeInput);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.manufacturerInput);
+            this.Controls.Add(this.modelInput);
+            this.Controls.Add(this.systemNameInput);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label systemNameInput;
+        private System.Windows.Forms.Label modelInput;
+        private System.Windows.Forms.Label manufacturerInput;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label motherboardTypeInput;
+        private System.Windows.Forms.Label ipAddressInput;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 
