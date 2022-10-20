@@ -49,7 +49,13 @@ namespace WindowsFormsApp1
 
         private void motherboardTypeInput_Click(object sender, EventArgs e)
         {
-        
+            ManagementObjectSearcher mos = new ManagementObjectSearcher("SELECT * FROM Win32_BaseBoard");
+            ManagementObjectCollection moc = mos.Get();
+            string serial = "";
+            foreach (ManagementObject mo in moc)
+            {
+                serial = (string)mo["SerialNumber"];
+            }
         }
     }
 }
