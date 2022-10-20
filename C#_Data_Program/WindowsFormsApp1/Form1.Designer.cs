@@ -31,12 +31,7 @@ namespace WindowsFormsApp1
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.systemNameInput = new System.Windows.Forms.Label();
-            this.modelInput = new System.Windows.Forms.Label();
-            this.manufacturerInput = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.motherboardTypeInput = new System.Windows.Forms.Label();
-            this.ipAddressInput = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,6 +41,12 @@ namespace WindowsFormsApp1
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -60,39 +61,12 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(649, 413);
+            this.button2.Location = new System.Drawing.Point(360, 414);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 33);
             this.button2.TabIndex = 1;
             this.button2.Text = "Check Hardware";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // systemNameInput
-            // 
-            this.systemNameInput.AutoSize = true;
-            this.systemNameInput.Location = new System.Drawing.Point(30, 113);
-            this.systemNameInput.Name = "systemNameInput";
-            this.systemNameInput.Size = new System.Drawing.Size(51, 20);
-            this.systemNameInput.TabIndex = 5;
-            this.systemNameInput.Text = "label1";
-            // 
-            // modelInput
-            // 
-            this.modelInput.AutoSize = true;
-            this.modelInput.Location = new System.Drawing.Point(236, 113);
-            this.modelInput.Name = "modelInput";
-            this.modelInput.Size = new System.Drawing.Size(51, 20);
-            this.modelInput.TabIndex = 6;
-            this.modelInput.Text = "label2";
-            // 
-            // manufacturerInput
-            // 
-            this.manufacturerInput.AutoSize = true;
-            this.manufacturerInput.Location = new System.Drawing.Point(397, 113);
-            this.manufacturerInput.Name = "manufacturerInput";
-            this.manufacturerInput.Size = new System.Drawing.Size(51, 20);
-            this.manufacturerInput.TabIndex = 7;
-            this.manufacturerInput.Text = "label3";
             // 
             // dateTimePicker1
             // 
@@ -100,25 +74,6 @@ namespace WindowsFormsApp1
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 8;
-            // 
-            // motherboardTypeInput
-            // 
-            this.motherboardTypeInput.AutoSize = true;
-            this.motherboardTypeInput.Location = new System.Drawing.Point(588, 113);
-            this.motherboardTypeInput.Name = "motherboardTypeInput";
-            this.motherboardTypeInput.Size = new System.Drawing.Size(51, 20);
-            this.motherboardTypeInput.TabIndex = 9;
-            this.motherboardTypeInput.Text = "label4";
-            this.motherboardTypeInput.Click += new System.EventHandler(this.motherboardTypeInput_Click);
-            // 
-            // ipAddressInput
-            // 
-            this.ipAddressInput.AutoSize = true;
-            this.ipAddressInput.Location = new System.Drawing.Point(30, 189);
-            this.ipAddressInput.Name = "ipAddressInput";
-            this.ipAddressInput.Size = new System.Drawing.Size(51, 20);
-            this.ipAddressInput.TabIndex = 15;
-            this.ipAddressInput.Text = "label5";
             // 
             // textBox7
             // 
@@ -204,11 +159,61 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 26;
             this.label1.Text = "Data Retrieval Program";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(700, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(88, 32);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Exit";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(34, 117);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 28;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(240, 116);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.TabIndex = 29;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(401, 116);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 26);
+            this.textBox3.TabIndex = 30;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(592, 116);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.TabIndex = 31;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(34, 193);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -218,16 +223,13 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.ipAddressInput);
-            this.Controls.Add(this.motherboardTypeInput);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.manufacturerInput);
-            this.Controls.Add(this.modelInput);
-            this.Controls.Add(this.systemNameInput);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,12 +239,7 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label systemNameInput;
-        private System.Windows.Forms.Label modelInput;
-        private System.Windows.Forms.Label manufacturerInput;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label motherboardTypeInput;
-        private System.Windows.Forms.Label ipAddressInput;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -252,6 +249,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
 

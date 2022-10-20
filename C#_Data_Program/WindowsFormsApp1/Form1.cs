@@ -52,5 +52,27 @@ namespace WindowsFormsApp1
         {
         
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            const string messages =
+            "Please confirm you wish to close the system";
+            const string caption = "Form Closing";
+            var results = MessageBox.Show(messages, caption,
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            // No button was pressed
+            if (results == DialogResult.No)
+            {
+                // Cancel closing form
+                e.Cancel = true;
+            }
+        }
     }
 }
