@@ -80,5 +80,23 @@ namespace WindowsFormsApp1
                 e.Cancel = true;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            const string messages =
+            "Please confirm you wish to close the system";
+            const string caption = "System Data Retrieval Closing";
+            var results = MessageBox.Show(messages, caption,
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            // No button was pressed
+            if (results == DialogResult.Yes)
+            {
+                // Cancel closing form
+                Application.Exit();
+            }
+        }
     }
 }
