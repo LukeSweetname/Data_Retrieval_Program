@@ -146,5 +146,10 @@ namespace WindowsFormsApp1
                 break;
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
