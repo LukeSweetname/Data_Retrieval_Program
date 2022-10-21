@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+       
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -125,6 +125,12 @@ namespace WindowsFormsApp1
             textBox4.Text = "";
             textBox5.Text = "";
             textBox7.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String q1 = Environment.MachineName; // Computer name
+            textBox1.Text = q1;
         }
     }
 }
