@@ -50,13 +50,7 @@ namespace WindowsFormsApp1
 
         private void motherboardTypeInput_Click(object sender, EventArgs e)
         {
-            ManagementObjectSearcher mos = new ManagementObjectSearcher("SELECT * FROM Win32_BaseBoard");
-            ManagementObjectCollection moc = mos.Get();
-            string serial = "";
-            foreach (ManagementObject mo in moc)
-            {
-                serial = (string)mo["SerialNumber"];
-            }
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -97,6 +91,16 @@ namespace WindowsFormsApp1
                 // Cancel closing form
                 Application.Exit();
             }
+        }
+
+        private void textBox4_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

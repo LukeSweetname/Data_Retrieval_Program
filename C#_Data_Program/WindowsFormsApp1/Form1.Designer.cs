@@ -67,6 +67,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 1;
             this.button2.Text = "Check Hardware";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dateTimePicker1
             // 
@@ -186,6 +187,7 @@ namespace WindowsFormsApp1
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 30;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged_1);
             // 
             // textBox5
             // 
