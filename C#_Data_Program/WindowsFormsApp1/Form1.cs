@@ -94,27 +94,27 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Enabled = false;
+            
         }
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
         {
-            textBox2.Enabled = false;
+            
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            textBox3.Enabled = false;
+            
         }
 
         private void textBox4_TextChanged_1(object sender, EventArgs e)
         {
-            textBox4.Enabled = false;
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            textBox5.Enabled = false;
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
