@@ -61,9 +61,9 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(649, 414);
+            this.button2.Location = new System.Drawing.Point(634, 414);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 33);
+            this.button2.Size = new System.Drawing.Size(154, 33);
             this.button2.TabIndex = 1;
             this.button2.Text = "Check Hardware";
             this.button2.UseVisualStyleBackColor = true;
