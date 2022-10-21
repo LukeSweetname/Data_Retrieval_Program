@@ -132,6 +132,8 @@ namespace WindowsFormsApp1
             String q1 = Environment.MachineName; // Computer name
             textBox1.Text = q1;
 
+          
+
 
 
             // Check Motherboard
