@@ -129,10 +129,19 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
             String q1 = Environment.MachineName; // Computer name
             textBox1.Text = q1;
 
-          
+
 
 
 
@@ -145,11 +154,6 @@ namespace WindowsFormsApp1
                 textBox4.Text = mngObject4.Properties["SerialNumber"].Value.ToString();
                 break;
             }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
