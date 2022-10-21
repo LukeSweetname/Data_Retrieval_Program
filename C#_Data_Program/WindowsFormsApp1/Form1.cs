@@ -126,5 +126,10 @@ namespace WindowsFormsApp1
             textBox5.Text = "";
             textBox7.Text = "";
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

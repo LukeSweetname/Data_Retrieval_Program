@@ -71,23 +71,23 @@ namespace WindowsFormsApp1
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(34, 353);
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 364);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 8;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(519, 277);
+            this.textBox7.Location = new System.Drawing.Point(473, 277);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(269, 102);
+            this.textBox7.Size = new System.Drawing.Size(315, 102);
             this.textBox7.TabIndex = 16;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 93);
+            this.label6.Location = new System.Drawing.Point(12, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 20);
             this.label6.TabIndex = 19;
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(236, 93);
+            this.label7.Location = new System.Drawing.Point(12, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 20);
             this.label7.TabIndex = 20;
@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(397, 93);
+            this.label8.Location = new System.Drawing.Point(12, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 20);
             this.label8.TabIndex = 21;
@@ -116,16 +116,17 @@ namespace WindowsFormsApp1
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(588, 93);
+            this.label9.Location = new System.Drawing.Point(12, 265);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(200, 20);
             this.label9.TabIndex = 22;
             this.label9.Text = "Motherboard type - Header";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 169);
+            this.label10.Location = new System.Drawing.Point(469, 75);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(153, 20);
             this.label10.TabIndex = 23;
@@ -134,7 +135,7 @@ namespace WindowsFormsApp1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(30, 330);
+            this.label11.Location = new System.Drawing.Point(12, 330);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(181, 20);
             this.label11.TabIndex = 24;
@@ -144,7 +145,7 @@ namespace WindowsFormsApp1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(515, 256);
+            this.label12.Location = new System.Drawing.Point(469, 254);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(151, 20);
             this.label12.TabIndex = 25;
@@ -172,41 +173,41 @@ namespace WindowsFormsApp1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 117);
+            this.textBox1.Location = new System.Drawing.Point(16, 98);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.Size = new System.Drawing.Size(263, 26);
             this.textBox1.TabIndex = 28;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(240, 116);
+            this.textBox2.Location = new System.Drawing.Point(16, 161);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
+            this.textBox2.Size = new System.Drawing.Size(263, 26);
             this.textBox2.TabIndex = 29;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(401, 116);
+            this.textBox3.Location = new System.Drawing.Point(16, 223);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
+            this.textBox3.Size = new System.Drawing.Size(263, 26);
             this.textBox3.TabIndex = 30;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(592, 116);
+            this.textBox4.Location = new System.Drawing.Point(16, 291);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.Size = new System.Drawing.Size(263, 26);
             this.textBox4.TabIndex = 31;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged_1);
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(34, 193);
+            this.textBox5.Location = new System.Drawing.Point(473, 98);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.Size = new System.Drawing.Size(315, 26);
             this.textBox5.TabIndex = 32;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
