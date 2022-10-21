@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(360, 414);
+            this.button2.Location = new System.Drawing.Point(649, 414);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 33);
             this.button2.TabIndex = 1;
@@ -161,12 +161,13 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(700, 415);
+            this.button3.Location = new System.Drawing.Point(401, 413);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 32);
             this.button3.TabIndex = 27;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
