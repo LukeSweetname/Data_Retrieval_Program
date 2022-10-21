@@ -131,6 +131,18 @@ namespace WindowsFormsApp1
         {
             String q1 = Environment.MachineName; // Computer name
             textBox1.Text = q1;
+
+
+
+            // Check Motherboard
+            ManagementClass management4 = new ManagementClass("Win32_BaseBoard");
+            ManagementObjectCollection managementobject4 = management4.GetInstances();
+
+            foreach (ManagementObject mngObject4 in managementobject4)
+            {
+                textBox4.Text = mngObject4.Properties["SerialNumber"].Value.ToString();
+                break;
+            }
         }
     }
 }
