@@ -165,6 +165,16 @@ namespace WindowsFormsApp1
                 textBox4.Text = mngObject4.Properties["SerialNumber"].Value.ToString();
                 break;
             }
+
+            // Check IP address
+           // ManagementClass management5 = new ManagementClass("Win32_NetworkAdapterConfiguration");
+           // ManagementObjectCollection managementobject5 = management5.GetInstances();
+
+           // foreach (ManagementObject mngObject5 in managementobject5)
+          //  {
+              //  textBox5.Text = mngObject5.Properties["IPAddress"].Value.ToString();
+               // break;
+           // }
         }
     }
 }
