@@ -137,13 +137,13 @@ namespace WindowsFormsApp1
             String q1 = Environment.MachineName; // Computer name
             textBox1.Text = q1;
 
-            // Check 
-            ManagementClass management1 = new ManagementClass("Win32_OperatingSystem");
+            // Check model id
+            ManagementClass management1 = new ManagementClass("Win32_ComputerSystem");
             ManagementObjectCollection managementobject1 = management1.GetInstances();
 
             foreach (ManagementObject mngObject1 in managementobject1)
             {
-                textBox2.Text = mngObject1.Properties["Name"].Value.ToString();
+                textBox2.Text = mngObject1.Properties["Model"].Value.ToString();
                 break;
             }
 
