@@ -137,10 +137,25 @@ namespace WindowsFormsApp1
             String q1 = Environment.MachineName; // Computer name
             textBox1.Text = q1;
 
+            // Check 
+            ManagementClass management1 = new ManagementClass("Win32_OperatingSystem");
+            ManagementObjectCollection managementobject1 = management1.GetInstances();
 
+            foreach (ManagementObject mngObject1 in managementobject1)
+            {
+                textBox2.Text = mngObject1.Properties["Name"].Value.ToString();
+                break;
+            }
 
+            // Check Manufacturer
+            ManagementClass management2 = new ManagementClass("Win32_ComputerSystem");
+            ManagementObjectCollection managementobject2 = management2.GetInstances();
 
-
+            foreach (ManagementObject mngObject2 in managementobject2)
+            {
+                textBox3.Text = mngObject2.Properties["Manufacturer"].Value.ToString();
+                break;
+            }
             // Check Motherboard
             ManagementClass management4 = new ManagementClass("Win32_BaseBoard");
             ManagementObjectCollection managementobject4 = management4.GetInstances();
