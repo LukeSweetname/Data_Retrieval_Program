@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
 
 namespace WindowsFormsApp1
 {
@@ -157,24 +159,24 @@ namespace WindowsFormsApp1
                 break;
             }
             // Check Motherboard
-            ManagementClass management4 = new ManagementClass("Win32_BaseBoard");
+            ManagementClass management4 = new ManagementClass("Win32_Processor");
             ManagementObjectCollection managementobject4 = management4.GetInstances();
 
             foreach (ManagementObject mngObject4 in managementobject4)
             {
-                textBox4.Text = mngObject4.Properties["SerialNumber"].Value.ToString();
+                textBox4.Text = mngObject4.Properties["Name"].Value.ToString();
                 break;
             }
 
             // Check IP address
-           // ManagementClass management5 = new ManagementClass("Win32_NetworkAdapterConfiguration");
-           // ManagementObjectCollection managementobject5 = management5.GetInstances();
-
-           // foreach (ManagementObject mngObject5 in managementobject5)
-          //  {
-              //  textBox5.Text = mngObject5.Properties["IPAddress"].Value.ToString();
-               // break;
-           // }
+            IPAddress[] ip = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress address in ip)
+            {
+                if (address.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    textBox5.Text = address.ToString();
+                }
+            }
         }
     }
 }
