@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 
 namespace WindowsFormsApp1
@@ -22,8 +23,21 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // adding database link
         {
+            SqlConnection conn;
+            string connString = "Data Source = mayar.abertay.ac.uk; Initial Catalog = " +
+                "sql2202448; User ID = sql2202448; Password = Fz2ggjKkinH6";
+            conn = new SqlConnection(connString);
+            {
+                conn.Open(); // open the connection
+                Console.WriteLine("Connection successfully established.\n");
+
+                // add code
+
+                conn.Close(); // close the connection
+                Console.WriteLine("\nConnection successfully terminated.");
+            }
 
         }
 
