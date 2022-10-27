@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using MySql.Data.MySqlClient;
+
 
 namespace WindowsFormsApp1
 {
