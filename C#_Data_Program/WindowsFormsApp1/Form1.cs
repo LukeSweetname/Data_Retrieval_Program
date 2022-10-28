@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using MySql.Data.MySqlClient;
+
 
 namespace WindowsFormsApp1
 {
@@ -20,11 +22,47 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // adding database link
         {
+            string server = "lochnagar.abertay.ac.uk";
+            string database = "sql2202448";
+            string username = "sql2202448";
+            string password = "Fz2ggjKkinH6";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "USERNAME=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+
+            conn.Open();
+
+            string systemName;
+            string systemModel;
+            string systemManufacturer;
+            string systemType;
+            string systemIPaddress;
+            string systemPurchaseDate;
+            string systemExtraDetails;
+
+            systemName = textBox1.Text;
+            systemModel = textBox2.Text;
+            systemManufacturer = textBox3.Text;
+            systemType = textBox4.Text;
+            systemIPaddress = textBox5.Text;
+            systemPurchaseDate = dateTimePicker1.Text;
+            systemExtraDetails = textBox7.Text;
+
+
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails)" +
+                "VALUES ('" + systemName + "','" + systemModel + "','" + systemManufacturer + "','" + systemType + "','" + systemIPaddress + "','" + systemPurchaseDate + "','" + systemExtraDetails + "')";
+            cmd.ExecuteNonQuery();
+           
+            conn.Close(); // close the connection
+            Console.WriteLine("\nConnection successfully terminated.");
 
         }
 
+ 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
