@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Management;
+// https://ourcodeworld.com/articles/read/294/how-to-retrieve-basic-and-advanced-hardware-and-software-information-gpu-hard-drive-processor-os-printers-in-winforms-with-c-sharp
+// Used the above link to identify the necessary references to access system management libraries
+// Copyright (c) 2016 Carlos Delgado | Code (C#)
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +13,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
-using MySql.Data.MySqlClient;
 
+// https://www.youtube.com/watch?v=izpntJlcs8o
+// Used the above link to identify the correct references needed for the IP address to be retrieved
+// Copyright (c) 2021 Ameer Hamza YouTube (TM) | Code (C#)
 
+using MySql.Data.MySqlClient; 
+// https://dev.mysql.com/downloads/windows/visualstudio/ 
+// Used above link to download visual studio/mysql functionality
+
+// https://ourcodeworld.com/articles/read/294/how-to-retrieve-basic-and-advanced-hardware-and-software-information-gpu-hard-drive-processor-os-printers-in-winforms-with-c-sharp
+// Copyright (c) 2016 Carlos Delgado | Code (C#)
+
+// https://learn.microsoft.com/en-us/aspnet/web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
+// Copyright (c) Microsoft (TM) forums 2022 | Code (C#)
+
+// https://www.guru99.com/c-sharp-windows-forms-application.html
+// Copyright (c) Barbara Thompson 2022 | Code (C#)
+
+// https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+// Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
+// Used the above links as general inspiration for the project
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -31,6 +52,9 @@ namespace WindowsFormsApp1
             string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "USERNAME=" + username + ";" + "PASSWORD=" + password + ";";
 
             MySqlConnection conn = new MySqlConnection(constring);
+            // https://learn.microsoft.com/en-us/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection
+            // Copyright (c) Microsoft (TM) forums 2022 | Code (C#)
+            // Used the above code to troubleshoot errors with the database connection
 
             conn.Open();
 
@@ -50,7 +74,16 @@ namespace WindowsFormsApp1
             systemPurchaseDate = dateTimePicker1.Text;
             systemExtraDetails = textBox7.Text;
 
+            // https://stackoverflow.com/questions/22806870/incorrect-datetime-value-database-error-number-1292
+            // Copyright Stack Overflow (c) (TM) 2022 | Code (C#)
+            // Used above link to investigate datetime error and resolve error.
 
+            // https://www.c-sharpcorner.com/article/connect-mysql-with-c-sharp-net-framework-in-visual-studio-2019/
+            // Copyright Ojash Shrestha (c) 2021 | Code (C#)
+
+            // https://www.youtube.com/watch?v=lXAgHdhbEzo
+            // Copyright OpenEducation (c) Youtube (TM) 2021 | Code (C#)
+            // Used the above links as inspiration for my database connection for my program. 
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails)" +
@@ -100,6 +133,9 @@ namespace WindowsFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+            // Used above link to help create exit functionality
+            // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
             const string messages =
             "Please confirm you wish to close the system";
             const string caption = "Form Closing";
@@ -117,6 +153,9 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+            // Used the above link to help create exit functionality
+            // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
             const string messages =
             "Please confirm you wish to close the system";
             const string caption = "System Data Retrieval Closing";
@@ -158,6 +197,10 @@ namespace WindowsFormsApp1
         }
 
         private void button5_Click(object sender, EventArgs e)
+        // Code for clearing the text boxes 
+        // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+        // Used above link to find out how to clear program worksheet
+        // // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
         {
             textBox1.Text = "";
             textBox2.Text = "";
@@ -174,9 +217,22 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String q1 = Environment.MachineName; // Computer name
+            // https://www.section.io/engineering-education/working-with-system-information-in-c-sharp-windows-form-application/
+            // Used the information in the above link to teach myself how to retrieve system information.
+            // The above link was used for retrieving the name, model, manufacturer and type.
+            // Copyright Kipkopus Samuel (c) 2022 | Code (c#)
+
+            // https://stackoverflow.com/questions/36011380/retrieving-system-and-os-info
+            // Used the above link to identify namespaces to retrieve system data
+            // Namespaces were used for all retrieval methods
+            // Copyright Stack Overflow (c) (TM) 2016 | Code (C#)
+
+
+            // Check computer name
+            String q1 = Environment.MachineName;
             textBox1.Text = q1;
 
+            
             // Check model id
             ManagementClass management1 = new ManagementClass("Win32_ComputerSystem");
             ManagementObjectCollection managementobject1 = management1.GetInstances();
@@ -187,6 +243,7 @@ namespace WindowsFormsApp1
                 break;
             }
 
+            
             // Check Manufacturer
             ManagementClass management2 = new ManagementClass("Win32_ComputerSystem");
             ManagementObjectCollection managementobject2 = management2.GetInstances();
@@ -196,6 +253,8 @@ namespace WindowsFormsApp1
                 textBox3.Text = mngObject2.Properties["Manufacturer"].Value.ToString();
                 break;
             }
+
+            
             // Check Motherboard
             ManagementClass management4 = new ManagementClass("Win32_Processor");
             ManagementObjectCollection managementobject4 = management4.GetInstances();
@@ -206,6 +265,9 @@ namespace WindowsFormsApp1
                 break;
             }
 
+            // https://www.youtube.com/watch?v=izpntJlcs8o
+            // Used the above link to identify the correct code for retrieving and displaying correctly, the systems IP address
+            // // Copyright (c) 2021 Ameer Hamza YouTube (TM) | Code (C#)
             // Check IP address
             IPAddress[] ip = Dns.GetHostAddresses(Dns.GetHostName());
             foreach (IPAddress address in ip)
