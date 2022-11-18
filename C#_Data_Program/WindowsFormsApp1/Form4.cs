@@ -21,5 +21,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var myForm = new Form1();
+            myForm.Show();
+        }
     }
 }
