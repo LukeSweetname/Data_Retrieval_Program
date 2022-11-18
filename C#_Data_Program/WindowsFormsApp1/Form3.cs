@@ -35,21 +35,21 @@ namespace WindowsFormsApp1
 
             // Check OS version
             ManagementClass management2 = new ManagementClass("Win32_OperatingSystem");
-            ManagementObjectCollection managementobject2 = management1.GetInstances();
+            ManagementObjectCollection managementobject2 = management2.GetInstances();
 
-            foreach (ManagementObject mngObject1 in managementobject1)
+            foreach (ManagementObject mngObject2 in managementobject2)
             {
-                textBox2.Text = mngObject1.Properties["Name"].Value.ToString();
+                textBox2.Text = mngObject2.Properties["Name"].Value.ToString();
                 break;
             }
 
             // Check OS manufacturer
             ManagementClass management3 = new ManagementClass("Win32_OperatingSystem");
-            ManagementObjectCollection managementobject3 = management1.GetInstances();
+            ManagementObjectCollection managementobject3 = management3.GetInstances();
 
-            foreach (ManagementObject mngObject1 in managementobject1)
+            foreach (ManagementObject mngObject3 in managementobject3)
             {
-                textBox3.Text = mngObject1.Properties["Name"].Value.ToString();
+                textBox3.Text = mngObject3.Properties["Name"].Value.ToString();
                 break;
             }
         }
