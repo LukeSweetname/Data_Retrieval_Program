@@ -44,9 +44,9 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(195, 412);
+            this.button5.Location = new System.Drawing.Point(437, 353);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 32);
+            this.button5.Size = new System.Drawing.Size(166, 52);
             this.button5.TabIndex = 53;
             this.button5.Text = "Clear Form";
             this.button5.UseVisualStyleBackColor = true;
@@ -55,28 +55,28 @@ namespace WindowsFormsApp1
             // 
             this.textBox3.Location = new System.Drawing.Point(16, 220);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 26);
+            this.textBox3.Size = new System.Drawing.Size(314, 26);
             this.textBox3.TabIndex = 50;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(16, 158);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 26);
+            this.textBox2.Size = new System.Drawing.Size(314, 26);
             this.textBox2.TabIndex = 49;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(16, 95);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 26);
+            this.textBox1.Size = new System.Drawing.Size(314, 26);
             this.textBox1.TabIndex = 48;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(519, 412);
+            this.button3.Location = new System.Drawing.Point(622, 353);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 32);
+            this.button3.Size = new System.Drawing.Size(166, 52);
             this.button3.TabIndex = 47;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(624, 411);
+            this.button2.Location = new System.Drawing.Point(622, 295);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 33);
+            this.button2.Size = new System.Drawing.Size(166, 52);
             this.button2.TabIndex = 36;
             this.button2.Text = "Check Software";
             this.button2.UseVisualStyleBackColor = true;
@@ -130,9 +130,9 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 412);
+            this.button1.Location = new System.Drawing.Point(437, 295);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 32);
+            this.button1.Size = new System.Drawing.Size(166, 52);
             this.button1.TabIndex = 35;
             this.button1.Text = "Add to Database\r\n";
             this.button1.UseVisualStyleBackColor = true;

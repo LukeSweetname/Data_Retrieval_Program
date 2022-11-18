@@ -96,7 +96,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(268, 324);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 29);
+            this.button1.Size = new System.Drawing.Size(98, 38);
             this.button1.TabIndex = 6;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(417, 324);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 29);
+            this.button2.Size = new System.Drawing.Size(98, 38);
             this.button2.TabIndex = 7;
             this.button2.Text = "Sign in";
             this.button2.UseVisualStyleBackColor = true;
