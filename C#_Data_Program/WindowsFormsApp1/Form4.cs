@@ -27,5 +27,15 @@ namespace WindowsFormsApp1
             var myForm = new Form1();
             myForm.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
