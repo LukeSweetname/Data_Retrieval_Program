@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
             foreach (ManagementObject mngObject2 in managementobject2)
             {
-                textBox2.Text = mngObject2.Properties["Name"].Value.ToString();
+                textBox2.Text = mngObject2.Properties["VersionString"].Value.ToString();
                 break;
             }
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
             foreach (ManagementObject mngObject3 in managementobject3)
             {
-                textBox3.Text = mngObject3.Properties["Name"].Value.ToString();
+                textBox3.Text = mngObject3.Properties["Manufacturer"].Value.ToString();
                 break;
             }
         }
@@ -59,6 +59,26 @@ namespace WindowsFormsApp1
             Form4 formname = new Form4();
             formname.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+            // Used the above link to help create exit functionality
+            // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
+            const string messages =
+            "Please confirm you wish to close the system";
+            const string caption = "System Data Retrieval Closing";
+            var results = MessageBox.Show(messages, caption,
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            // No button was pressed
+            if (results == DialogResult.Yes)
+            {
+                // Cancel closing form
+                Application.Exit();
+            }
         }
     }
 }
