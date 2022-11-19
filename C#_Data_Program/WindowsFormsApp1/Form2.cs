@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
             {
                 Form4 formname = new Form4();
                 formname.Show();
+                this.Hide();
                 textBox2.Text = "";
                 textBox1.Text = "";
             } else
