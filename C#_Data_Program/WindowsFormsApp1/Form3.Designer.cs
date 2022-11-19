@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
             this.button5.TabIndex = 53;
             this.button5.Text = "Clear Form";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox3
             // 
@@ -138,6 +139,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 35;
             this.button1.Text = "Add to Database\r\n";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
