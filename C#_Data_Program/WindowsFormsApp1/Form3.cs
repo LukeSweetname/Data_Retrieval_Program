@@ -53,5 +53,12 @@ namespace WindowsFormsApp1
                 break;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form4 formname = new Form4();
+            formname.Show();
+            this.Hide();
+        }
     }
 }

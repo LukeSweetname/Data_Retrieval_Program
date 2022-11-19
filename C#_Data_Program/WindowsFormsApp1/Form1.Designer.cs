@@ -48,13 +48,14 @@ namespace WindowsFormsApp1
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 415);
+            this.button1.Location = new System.Drawing.Point(34, 409);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 32);
+            this.button1.Size = new System.Drawing.Size(144, 38);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add to Database\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,9 +63,9 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(624, 414);
+            this.button2.Location = new System.Drawing.Point(624, 409);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 33);
+            this.button2.Size = new System.Drawing.Size(164, 38);
             this.button2.TabIndex = 1;
             this.button2.Text = "Check Hardware";
             this.button2.UseVisualStyleBackColor = true;
@@ -164,9 +165,9 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(519, 415);
+            this.button3.Location = new System.Drawing.Point(519, 409);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 32);
+            this.button3.Size = new System.Drawing.Size(88, 38);
             this.button3.TabIndex = 27;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
@@ -214,19 +215,30 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(195, 415);
+            this.button5.Location = new System.Drawing.Point(195, 409);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 32);
+            this.button5.Size = new System.Drawing.Size(101, 38);
             this.button5.TabIndex = 34;
             this.button5.Text = "Clear Form";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(331, 409);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(144, 38);
+            this.button4.TabIndex = 35;
+            this.button4.Text = "Return to Menu";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -276,6 +288,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 

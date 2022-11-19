@@ -19,7 +19,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form3 formname = new Form3();
+            formname.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -30,7 +32,9 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Form1 formname = new Form1();
+            formname.Show();
+            this.Hide();
         }
 
         private void Form4_Load(object sender, EventArgs e)
