@@ -103,17 +103,13 @@ namespace WindowsFormsApp1
 
             conn.Open();
 
-            string systemName;
-            string systemModel;
-            string systemManufacturer;
-            string systemType;
-            string systemIPaddress;
-            string systemPurchaseDate;
-            string systemExtraDetails;
+            string OSname;
+            string OSversion;
+            string OSmanufacturer;
 
-            systemName = textBox1.Text;
-            systemModel = textBox2.Text;
-            systemManufacturer = textBox3.Text;
+            OSname = textBox1.Text;
+            OSversion = textBox2.Text;
+            OSmanufacturer = textBox3.Text;
             
 
             // https://stackoverflow.com/questions/22806870/incorrect-datetime-value-database-error-number-1292
@@ -128,8 +124,8 @@ namespace WindowsFormsApp1
             // Used the above links as inspiration for my database connection for my program. 
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails)" +
-                "VALUES ('" + systemName + "','" + systemModel + "','" + systemManufacturer + "','" + systemType + "','" + systemIPaddress + "','" + systemPurchaseDate + "','" + systemExtraDetails + "')";
+            cmd.CommandText = "INSERT INTO softwareData (OSname, OSversion, OSmanufacturer)" +
+                "VALUES ('" + OSname + "','" + OSversion + "','" + OSmanufacturer + "')";
             cmd.ExecuteNonQuery();
 
             conn.Close(); // close the connection
