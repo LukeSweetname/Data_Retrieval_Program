@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button4
@@ -221,6 +222,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 36;
             this.button1.Text = "Send back to Database\r\n";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -238,11 +240,21 @@ namespace WindowsFormsApp1
             this.textBox6.Size = new System.Drawing.Size(315, 26);
             this.textBox6.TabIndex = 57;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(246, 362);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(191, 38);
+            this.button6.TabIndex = 58;
+            this.button6.Text = "Delete from Database";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
@@ -296,5 +308,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button6;
     }
 }
