@@ -34,14 +34,14 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1118, 386);
+            this.button4.Location = new System.Drawing.Point(1105, 386);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 52);
             this.button4.TabIndex = 55;
@@ -50,9 +50,9 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(16, 12);
+            this.button5.Location = new System.Drawing.Point(985, 386);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 38);
+            this.button5.Size = new System.Drawing.Size(114, 52);
             this.button5.TabIndex = 54;
             this.button5.Text = "Clear Form";
             this.button5.UseVisualStyleBackColor = true;
@@ -87,15 +87,6 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(443, 386);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 52);
-            this.button6.TabIndex = 58;
-            this.button6.Text = "Delete from Database";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -103,17 +94,28 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1268, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(1255, 278);
             this.dataGridView1.TabIndex = 59;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(67, 363);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1079, 20);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "To view the data stored on the database, simply clikc on \'Retrieve from Database\'" +
+    ". You can then double click on any data entry to edit or delete the data. ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
@@ -134,7 +136,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
     }
 }
