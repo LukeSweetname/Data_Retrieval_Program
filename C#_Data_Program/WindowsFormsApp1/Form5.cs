@@ -22,25 +22,17 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection(connectionString);
 
-            con.Open();
+            MySqlCommand sqlCmd = new MySqlCommand();
+            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.CommandText = "SELECT * FROM hardwareData";
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
 
-            MySqlCommand cmd = con.CreateCommand();
-            cmd.CommandText = "SELECT * FROM hardwareData where systemName = @systemName";
-            cmd.Parameters.AddWithValue("@systemName", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemModel", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemManufacturer", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemType", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemIPaddress", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemPurchaseDate", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemMACaddress", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemExtraDetails", dataGridView1.Text);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                MessageBox.Show(reader["hardwareData"].ToString());
-            }
+            DataTable dtrecord = new DataTable();
+            sqlDataAdap.Fill(dtrecord);
+            dataGridView1.DataSource = dtrecord;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,14 +42,14 @@ namespace WindowsFormsApp1
             con.Open();
 
             MySqlCommand cmd = con.CreateCommand();
-            cmd.Parameters.AddWithValue("@systemName", dataGridView1.Text);
+            /*cmd.Parameters.AddWithValue("@systemName", dataGridView1.Text);
             cmd.Parameters.AddWithValue("@systemModel", dataGridView1.Text);
             cmd.Parameters.AddWithValue("@systemManufacturer", dataGridView1.Text);
             cmd.Parameters.AddWithValue("@systemType", dataGridView1.Text);
             cmd.Parameters.AddWithValue("@systemIPaddress", dataGridView1.Text);
             cmd.Parameters.AddWithValue("@systemPurchaseDate", dataGridView1.Text);
             cmd.Parameters.AddWithValue("@systemMACaddress", dataGridView1.Text);
-            cmd.Parameters.AddWithValue("@systemExtraDetails", dataGridView1.Text);
+            cmd.Parameters.AddWithValue("@systemExtraDetails", dataGridView1.Text);*/
 
             cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemMACaddress, systemExtraDetails)" +
                 "VALUES (@systemName, @systemModel, @systemManufacturer, @systemType, @systemIPaddress, @systemPurchaseDate, @systemMACaddress, @systemExtraDetails)";

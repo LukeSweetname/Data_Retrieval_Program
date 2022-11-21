@@ -42,9 +42,9 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(644, 406);
+            this.button4.Location = new System.Drawing.Point(1118, 386);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 38);
+            this.button4.Size = new System.Drawing.Size(166, 52);
             this.button4.TabIndex = 55;
             this.button4.Text = "Return to Menu";
             this.button4.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(700, 12);
+            this.button3.Location = new System.Drawing.Point(1118, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 38);
             this.button3.TabIndex = 48;
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(187, 6);
+            this.label1.Location = new System.Drawing.Point(416, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(435, 46);
             this.label1.TabIndex = 47;
@@ -80,9 +80,9 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(218, 406);
+            this.button2.Location = new System.Drawing.Point(218, 386);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 38);
+            this.button2.Size = new System.Drawing.Size(219, 52);
             this.button2.TabIndex = 37;
             this.button2.Text = "Retrieve from Database";
             this.button2.UseVisualStyleBackColor = true;
@@ -90,9 +90,9 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 406);
+            this.button1.Location = new System.Drawing.Point(16, 386);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 38);
+            this.button1.Size = new System.Drawing.Size(196, 52);
             this.button1.TabIndex = 36;
             this.button1.Text = "Send back to Database\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@ namespace WindowsFormsApp1
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(443, 406);
+            this.button6.Location = new System.Drawing.Point(443, 386);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 38);
+            this.button6.Size = new System.Drawing.Size(191, 52);
             this.button6.TabIndex = 58;
             this.button6.Text = "Delete from Database";
             this.button6.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(772, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(1268, 278);
             this.dataGridView1.TabIndex = 59;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1296, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
