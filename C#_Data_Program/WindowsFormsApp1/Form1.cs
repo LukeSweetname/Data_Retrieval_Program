@@ -92,10 +92,11 @@ namespace WindowsFormsApp1
            
             conn.Close(); // close the connection
             Console.WriteLine("\nConnection successfully terminated.");
+            MessageBox.Show("You have successfully added this data to the database, please click exit or return to the menu.");
 
         }
 
- 
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -133,22 +134,7 @@ namespace WindowsFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
-            // Used above link to help create exit functionality
-            // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
-            const string messages =
-            "Please confirm you wish to close the system";
-            const string caption = "Form Closing";
-            var results = MessageBox.Show(messages, caption,
-                                          MessageBoxButtons.YesNo,
-                                          MessageBoxIcon.Question);
-
-            // No button was pressed
-            if (results == DialogResult.No)
-            {
-                // Cancel closing form
-                e.Cancel = true;
-            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

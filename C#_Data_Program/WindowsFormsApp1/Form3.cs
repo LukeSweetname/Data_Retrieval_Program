@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
             foreach (ManagementObject mngObject2 in managementobject2)
             {
-                textBox2.Text = mngObject2.Properties["VersionString"].Value.ToString();
+                textBox2.Text = mngObject2.Properties["Version"].Value.ToString();
                 break;
             }
 
@@ -130,6 +130,12 @@ namespace WindowsFormsApp1
 
             conn.Close(); // close the connection
             Console.WriteLine("\nConnection successfully terminated.");
+            MessageBox.Show("You have successfully added this data to the database, please click exit or return to the menu");
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

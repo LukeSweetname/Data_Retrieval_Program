@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             
-            MySqlConnection con = new MySqlConnection(connectionString);
+            /*MySqlConnection con = new MySqlConnection(connectionString);
 
             con.Open();
 
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Data was added to database");
             else
                 MessageBox.Show("Data was not added to database");
-            con.Close();
+            con.Close();*/
 
 
         }
