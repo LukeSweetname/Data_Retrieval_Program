@@ -29,8 +29,13 @@ namespace WindowsFormsApp1
             MySqlCommand cmd = con.CreateCommand();
             cmd.CommandText = "SELECT * FROM hardwareData where systemName = @systemName";
             cmd.Parameters.AddWithValue("@systemName", textBox1.Text);
-            cmd.Parameters.AddWithValue("@systemName", textBox1.Text);
-            cmd.Parameters.AddWithValue("@systemName", textBox1.Text);
+            cmd.Parameters.AddWithValue("@systemModel", textBox2.Text);
+            cmd.Parameters.AddWithValue("@systemManufacturer", textBox3.Text);
+            cmd.Parameters.AddWithValue("@systemType", textBox4.Text);
+            cmd.Parameters.AddWithValue("@systemIPaddress", textBox5.Text);
+            cmd.Parameters.AddWithValue("@systemPurchaseDate", dateTimePicker1.Text);
+            cmd.Parameters.AddWithValue("@systemMACaddress", textBox6.Text);
+            cmd.Parameters.AddWithValue("@systemExtraDetails", textBox7.Text);
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -63,6 +68,31 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Data was not added to database");
             con.Close();
 
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+            // Used the above link to help create exit functionality
+            // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
+            const string messages =
+            "Please confirm you wish to close the system";
+            const string caption = "System Data Retrieval Closing";
+            var results = MessageBox.Show(messages, caption,
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            // No button was pressed
+            if (results == DialogResult.Yes)
+            {
+                // Cancel closing form
+                Application.Exit();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
