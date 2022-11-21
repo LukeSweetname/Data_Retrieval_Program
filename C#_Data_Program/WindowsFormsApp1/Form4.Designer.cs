@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 57);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Edit/Delete";
+            this.button2.Text = "View/Edit/Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 57);
             this.button1.TabIndex = 0;
-            this.button1.Text = "View/Add";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -98,8 +98,9 @@ namespace WindowsFormsApp1
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(154, 57);
             this.button7.TabIndex = 1;
-            this.button7.Text = "Edit/Delete";
+            this.button7.Text = "View/Edit/Delete";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -107,7 +108,7 @@ namespace WindowsFormsApp1
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(154, 57);
             this.button8.TabIndex = 0;
-            this.button8.Text = "View/Add";
+            this.button8.Text = "Add";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
