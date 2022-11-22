@@ -76,7 +76,22 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            checkBox1.Checked = true;
+        }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox1.UseSystemPasswordChar = true;
+                var checkBox = (CheckBox)sender;
+                checkBox.Text = "View Password";
+            } else
+            {
+                textBox1.UseSystemPasswordChar = false;
+                var checkBox = (CheckBox)sender;
+                checkBox.Text = "Hide Password";
+            }
         }
     }
     }
