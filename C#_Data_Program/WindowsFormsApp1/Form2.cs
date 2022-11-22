@@ -30,15 +30,25 @@ namespace WindowsFormsApp1
             MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + textBox2.Text + "' AND passWord = '" + textBox1.Text + "'", con);
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            if (reader.Read())
+            while (reader.Read())
             {
                 Form4 formname = new Form4();
                 formname.Show();
                 this.Hide();
                 textBox2.Text = "";
                 textBox1.Text = "";
-            } else
+            }
+            if (String.IsNullOrEmpty(textBox1.Text) && (String.IsNullOrEmpty(textBox2.Text)))
             {
+                richTextBox1.Text = "Both fields are empty, please enter a valid Username & Password.";
+            }
+            else if (String.IsNullOrEmpty(textBox1.Text)){
+                richTextBox1.Text = "Please enter a valid password in the Password field.";
+            } 
+            else if (String.IsNullOrEmpty(textBox2.Text)){
+                richTextBox1.Text = "Please enter a valid username in the Username field.";
+            }
+            else{
                 textBox2.Text = "";
                 textBox1.Text = "";
                 richTextBox1.Text = "The details you have entered are incorrect, please try again.";
