@@ -29,13 +29,10 @@ namespace WindowsFormsApp1
 
             foreach (ManagementObject mngObject1 in managementobject1)
             {
-                mngObject1.Properties["Name"].Value.ToString();
-                string s = "Name";
-                string[] subs = s.Split(' ');
-                foreach (var sub in subs)
-                {
-                    textBox1.Text = ($"Name: {sub}");
-                }
+                string temp = mngObject1.Properties["Name"].Value.ToString();
+                string[] subs = temp.Split('|');
+                string finalres = subs[0];
+                textBox1.Text = finalres;
                 break;
             }
 

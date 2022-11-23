@@ -32,9 +32,11 @@ namespace WindowsFormsApp1
 
             while (reader.Read())
             {
+                // Direct to main page
                 Form4 formname = new Form4();
                 formname.Show();
                 this.Hide();
+                // Clear text boxes
                 username.Text = "";
                 password.Text = "";
             }
