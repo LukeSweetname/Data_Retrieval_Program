@@ -69,7 +69,16 @@ namespace WindowsFormsApp1
 
         private void button7_Click(object sender, EventArgs e)
         {
+            Form5 formname = new Form5();
+            formname.Show();
+            this.Hide();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form6 formname = new Form6();
+            formname.Show();
+            this.Hide();
         }
     }
 }
