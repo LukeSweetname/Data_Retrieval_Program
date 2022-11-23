@@ -27,7 +27,9 @@ namespace WindowsFormsApp1
         {
             MySqlConnection con = new MySqlConnection("server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + username.Text + "' AND passWord = '" + password.Text + "'", con);
+            MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + usernameField.Text + "' AND passWord = '" + passwordField.Text + "'", con);
+            string password = ("passwordField.Text");
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -37,22 +39,22 @@ namespace WindowsFormsApp1
                 formname.Show();
                 this.Hide();
                 // Clear text boxes
-                username.Text = "";
-                password.Text = "";
+                usernameField.Text = "";
+                passwordField.Text = "";
             }
-            if (String.IsNullOrEmpty(password.Text) && (String.IsNullOrEmpty(username.Text)))
+            if (String.IsNullOrEmpty(passwordField.Text) && (String.IsNullOrEmpty(usernameField.Text)))
             {
                 richTextBox1.Text = "Both fields are empty, please enter a valid Username & Password.";
             }
-            else if (String.IsNullOrEmpty(password.Text)){
+            else if (String.IsNullOrEmpty(passwordField.Text)){
                 richTextBox1.Text = "Please enter a valid password in the Password field.";
             } 
-            else if (String.IsNullOrEmpty(username.Text)){
+            else if (String.IsNullOrEmpty(usernameField.Text)){
                 richTextBox1.Text = "Please enter a valid username in the Username field.";
             }
             else{
-                username.Text = "";
-                password.Text = "";
+                usernameField.Text = "";
+                passwordField.Text = "";
                 richTextBox1.Text = "The details you have entered are incorrect, please try again.";
             }
             reader.Close();
@@ -95,12 +97,12 @@ namespace WindowsFormsApp1
         {
             if (checkBox1.Checked)
             {
-                password.UseSystemPasswordChar = true;
+                passwordField.UseSystemPasswordChar = true;
                 var checkBox = (CheckBox)sender;
                 checkBox.Text = "View Password";
             } else
             {
-                password.UseSystemPasswordChar = false;
+                passwordField.UseSystemPasswordChar = false;
                 var checkBox = (CheckBox)sender;
                 checkBox.Text = "Hide Password";
             }

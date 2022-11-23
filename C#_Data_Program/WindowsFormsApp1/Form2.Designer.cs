@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.password = new System.Windows.Forms.TextBox();
-            this.username = new System.Windows.Forms.TextBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
+            this.usernameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,19 +41,19 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // password
+            // passwordField
             // 
-            this.password.Location = new System.Drawing.Point(364, 261);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(141, 26);
-            this.password.TabIndex = 0;
+            this.passwordField.Location = new System.Drawing.Point(364, 261);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(141, 26);
+            this.passwordField.TabIndex = 0;
             // 
-            // username
+            // usernameField
             // 
-            this.username.Location = new System.Drawing.Point(364, 213);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(141, 26);
-            this.username.TabIndex = 1;
+            this.usernameField.Location = new System.Drawing.Point(364, 213);
+            this.usernameField.Name = "usernameField";
+            this.usernameField.Size = new System.Drawing.Size(141, 26);
+            this.usernameField.TabIndex = 1;
             // 
             // label1
             // 
@@ -157,8 +157,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.username);
-            this.Controls.Add(this.password);
+            this.Controls.Add(this.usernameField);
+            this.Controls.Add(this.passwordField);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";
@@ -171,8 +171,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox passwordField;
+        private System.Windows.Forms.TextBox usernameField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
