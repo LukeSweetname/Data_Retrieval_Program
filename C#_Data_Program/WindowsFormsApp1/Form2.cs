@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             MySqlConnection con = new MySqlConnection("server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + textBox2.Text + "' AND passWord = '" + textBox1.Text + "'", con);
+            MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + username.Text + "' AND passWord = '" + password.Text + "'", con);
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -35,22 +35,22 @@ namespace WindowsFormsApp1
                 Form4 formname = new Form4();
                 formname.Show();
                 this.Hide();
-                textBox2.Text = "";
-                textBox1.Text = "";
+                username.Text = "";
+                password.Text = "";
             }
-            if (String.IsNullOrEmpty(textBox1.Text) && (String.IsNullOrEmpty(textBox2.Text)))
+            if (String.IsNullOrEmpty(password.Text) && (String.IsNullOrEmpty(username.Text)))
             {
                 richTextBox1.Text = "Both fields are empty, please enter a valid Username & Password.";
             }
-            else if (String.IsNullOrEmpty(textBox1.Text)){
+            else if (String.IsNullOrEmpty(password.Text)){
                 richTextBox1.Text = "Please enter a valid password in the Password field.";
             } 
-            else if (String.IsNullOrEmpty(textBox2.Text)){
+            else if (String.IsNullOrEmpty(username.Text)){
                 richTextBox1.Text = "Please enter a valid username in the Username field.";
             }
             else{
-                textBox2.Text = "";
-                textBox1.Text = "";
+                username.Text = "";
+                password.Text = "";
                 richTextBox1.Text = "The details you have entered are incorrect, please try again.";
             }
             reader.Close();
@@ -93,12 +93,12 @@ namespace WindowsFormsApp1
         {
             if (checkBox1.Checked)
             {
-                textBox1.UseSystemPasswordChar = true;
+                password.UseSystemPasswordChar = true;
                 var checkBox = (CheckBox)sender;
                 checkBox.Text = "View Password";
             } else
             {
-                textBox1.UseSystemPasswordChar = false;
+                password.UseSystemPasswordChar = false;
                 var checkBox = (CheckBox)sender;
                 checkBox.Text = "Hide Password";
             }
