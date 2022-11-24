@@ -27,8 +27,7 @@ namespace WindowsFormsApp1
         {
             MySqlConnection con = new MySqlConnection("server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO user2 (userName = '" + usernameField.Text + "' AND passWord = '" + passwordField.Text + "'", con);
-            MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM user2");
+            MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + usernameField.Text + "' AND passWord = '" + passwordField.Text + "'", con);
             string password = ("passwordField.Text");
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
             MySqlDataReader reader = cmd.ExecuteReader(); // THIS SHIT ISN'T WORKING RIGHT NOW
