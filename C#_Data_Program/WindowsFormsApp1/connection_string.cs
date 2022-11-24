@@ -12,7 +12,7 @@ namespace WindowsFormsApp1.connection_class
         public static string Conn()
         {
             string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
-            return connection_string;
+            return connectionString;
 
         }
         //string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
