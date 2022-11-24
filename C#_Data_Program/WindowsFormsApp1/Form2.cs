@@ -27,13 +27,24 @@ namespace WindowsFormsApp1
         {
             MySqlConnection con = new MySqlConnection("server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6");
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from user2 where userName = '" + usernameField.Text + "' AND passWord = '" + passwordField.Text + "'", con);
-            string password = ("passwordField.Text");
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+            MySqlCommand cmd = new MySqlCommand("select passWord from user2 where userName = '" + usernameField.Text + "'", con);
             MySqlDataReader reader = cmd.ExecuteReader(); // THIS SHIT ISN'T WORKING RIGHT NOW
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    if (passwordField.Text == reader.GetString(0))
+                    {
+                        DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        DialogResult = DialogResult.Abort;
+                    }
+                }
+            }
 
-
-            while (reader.Read())
+            if (BCrypt.Net.BCrypt.Verify(passwordField.Text, reader.GetString(0)))
             {
                 // Direct to main page
                 Form4 formname = new Form4();
