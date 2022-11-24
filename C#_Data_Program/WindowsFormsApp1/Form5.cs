@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using WindowsFormsApp1.connection_class;
 namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
+        //string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
 
         private void button2_Click(object sender, EventArgs e)
         {

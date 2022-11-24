@@ -28,8 +28,8 @@ namespace WindowsFormsApp1
             MySqlConnection con = new MySqlConnection("server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6");
             con.Open();
             MySqlCommand cmd = new MySqlCommand("select passWord from user2 where userName = '" + usernameField.Text + "'", con);
-            MySqlDataReader reader = cmd.ExecuteReader(); // THIS SHIT ISN'T WORKING RIGHT NOW
-            if (reader.HasRows)
+            MySqlDataReader reader = cmd.ExecuteReader();
+            /*if (reader.HasRows)
             {
                 while (reader.Read())
                 {
@@ -40,19 +40,28 @@ namespace WindowsFormsApp1
                     else
                     {
                         DialogResult = DialogResult.Abort;
+                        
                     }
                 }
-            }
+            }*/
 
-            if (BCrypt.Net.BCrypt.Verify(passwordField.Text, reader.GetString(0)))
+            if (reader.HasRows)
             {
-                // Direct to main page
-                Form4 formname = new Form4();
-                formname.Show();
-                this.Hide();
-                // Clear text boxes
-                usernameField.Text = "";
-                passwordField.Text = "";
+                while (reader.Read())
+                {
+
+                    if (BCrypt.Net.BCrypt.Verify(passwordField.Text, reader.GetString(0)))
+                    {
+                        // Direct to main page
+                        Form4 formname = new Form4();
+                        formname.Show();
+                        this.Hide();
+                        // Clear text boxes
+                        usernameField.Text = "";
+                        passwordField.Text = "";
+                    }
+
+                }
             }
             if (String.IsNullOrEmpty(passwordField.Text) && (String.IsNullOrEmpty(usernameField.Text)))
             {
