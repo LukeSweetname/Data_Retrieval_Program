@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connection_class\connection_string.cs" />
+    <Compile Include="connection_string.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
