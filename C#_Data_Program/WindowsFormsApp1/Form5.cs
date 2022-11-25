@@ -39,20 +39,24 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             
-            /*MySqlConnection con = new MySqlConnection(connectionString);
+            MySqlConnection con = new MySqlConnection(connectionString);
 
             con.Open();
 
-            MySqlCommand cmd = con.CreateCommand();
+            MySqlCommand sqlCmd = new MySqlCommand();
+            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.CommandText = "UPDATE hardwareData SET systemName = ?, systemModel = ?, systemManufacturer = ?, systemType = ?, systemIPaddress = ?, systemPurchaseDate = ?, systemExtraDetails = ? WHERE fieldId = ?;";
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
 
-            cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails)" +
-                "VALUES ('" + systemName + "','" + systemModel + "','" + systemManufacturer + "','" + systemType + "','" + systemIPaddress + "','" + systemPurchaseDate + "','" + systemExtraDetails + "')";
+            DataTable dtrecord = new DataTable();
+            sqlDataAdap.Update(dtrecord);
+            dataGridView1.DataSource = dtrecord;
 
-            if (cmd.ExecuteNonQuery() > 0)
-                MessageBox.Show("Data was added to database");
-            else
-                MessageBox.Show("Data was not added to database");
-            con.Close();*/
+            int rowindex = dataGridView1.CurrentRow.Index;
+            MessageBox.Show(rowindex.ToString());
+
+            con.Close();
 
 
         }
