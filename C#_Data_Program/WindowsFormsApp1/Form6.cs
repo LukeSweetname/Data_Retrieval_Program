@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
             MySqlCommand sqlCmd = new MySqlCommand();
             sqlCmd.Connection = new MySqlConnection(connectionString);
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "SELECT OSname, OSversion, OSmanufacturer FROM softwareData";
+            sqlCmd.CommandText = "SELECT fieldId, OSname, OSversion, OSmanufacturer FROM softwareData";
             MySqlDataAdapter sqlDataAdap1 = new MySqlDataAdapter(sqlCmd);
 
             DataTable dtrecord = new DataTable();
