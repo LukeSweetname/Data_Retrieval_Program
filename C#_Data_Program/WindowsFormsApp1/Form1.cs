@@ -265,6 +265,7 @@ namespace WindowsFormsApp1
                     textBox5.Text = address.ToString();
                 }
             }
+            // Get MAC address
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
             String sMacAddress = string.Empty;
             foreach (NetworkInterface adapter in nics)
@@ -275,7 +276,12 @@ namespace WindowsFormsApp1
                     sMacAddress = adapter.GetPhysicalAddress().ToString();
                 }
             }
-            textBox6.Text = sMacAddress;
+            string temp = sMacAddress;
+            string[] subs = temp.Split("0, 1 ' '");
+            string finalres = subs[0];
+            textBox1.Text = finalres;
+            break;
+            textBox6.Text = sMacAddress; // This is where I got to, I need to change the formatting of the MAC address result.
 
             // Retrieving MAC address
             /*
