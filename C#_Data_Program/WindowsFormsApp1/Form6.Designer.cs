@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
@@ -43,13 +44,12 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-1, 361);
+            this.label2.Location = new System.Drawing.Point(12, 359);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1406, 20);
+            this.label2.Size = new System.Drawing.Size(828, 40);
             this.label2.TabIndex = 67;
-            this.label2.Text = "To view the data stored on the database, simply click on \'Retrieve from Database\'" +
-    ". You can then double click on any data entry to edit or delete the data. Once c" +
-    "omplete, click \'Send back to Database\'.";
+            this.label2.Text = resources.GetString("label2.Text");
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 
@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(816, 384);
+            this.button4.Location = new System.Drawing.Point(816, 415);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 52);
             this.button4.TabIndex = 65;
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(696, 384);
+            this.button5.Location = new System.Drawing.Point(696, 415);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(114, 52);
             this.button5.TabIndex = 64;
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(215, 384);
+            this.button2.Location = new System.Drawing.Point(215, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 52);
             this.button2.TabIndex = 62;
@@ -102,16 +102,17 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 384);
+            this.button1.Location = new System.Drawing.Point(13, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 52);
             this.button1.TabIndex = 61;
             this.button1.Text = "Send back to Database\r\n";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(576, 386);
+            this.button3.Location = new System.Drawing.Point(576, 415);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 52);
             this.button3.TabIndex = 68;
@@ -123,7 +124,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 450);
+            this.ClientSize = new System.Drawing.Size(996, 479);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);

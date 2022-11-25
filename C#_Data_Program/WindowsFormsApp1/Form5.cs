@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
             MySqlCommand sqlCmd = new MySqlCommand();
             sqlCmd.Connection = new MySqlConnection(connectionString);
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "SELECT systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails FROM hardwareData;";
+            sqlCmd.CommandText = "SELECT fieldId, systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails FROM hardwareData;";
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
 
             DataTable dtrecord = new DataTable();
@@ -92,6 +92,31 @@ namespace WindowsFormsApp1
             Form4 formname = new Form4();
             formname.Show();
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            // https://www.youtube.com/watch?v=bkzOvlqD1s4&t=100s
+            // Used the above link to help create exit functionality
+            // Copyright (c) DJ Oamen Youtube (TM) 2015 | Code (C#)
+            const string messages =
+            "Please confirm you wish to close the system";
+            const string caption = "System Data Retrieval Closing";
+            var results = MessageBox.Show(messages, caption,
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            // No button was pressed
+            if (results == DialogResult.Yes)
+            {
+                // Cancel closing form
+                Application.Exit();
+            }
         }
     }
 }
