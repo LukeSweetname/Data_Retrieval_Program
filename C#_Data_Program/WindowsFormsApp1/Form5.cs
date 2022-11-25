@@ -38,8 +38,16 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            MySqlCommand sqlCmd = new MySqlCommand();
+
             MySqlConnection con = new MySqlConnection(connectionString);
+
+            MySqlDataAdapter sqlDataAdaptor = new MySqlDataAdapter();
+
+            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.CommandType = CommandType.Text;
+
+            sqlCmd.CommandText = ("UPDATE hardwareData SET systemName = @systemName, systemModel = @systemModel, systemManufacturer = @systemManufacturer, systemType = @systemType, systemIPaddress = @systemIPaddress, systemPurchaseDate = 
 
             con.Open();
 
