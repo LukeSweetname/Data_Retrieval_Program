@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {/*
             MySqlCommand sqlCmd = new MySqlCommand();
 
             MySqlConnection con = new MySqlConnection(connectionString);
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
 
             con.Close();
 
-
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)

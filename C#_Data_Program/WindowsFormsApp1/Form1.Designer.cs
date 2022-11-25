@@ -49,6 +49,8 @@ namespace WindowsFormsApp1
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -233,11 +235,30 @@ namespace WindowsFormsApp1
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(473, 161);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(315, 26);
+            this.textBox6.TabIndex = 36;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(469, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 20);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "MAC address - Header";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 495);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox5);
@@ -289,6 +310,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label2;
     }
 }
 

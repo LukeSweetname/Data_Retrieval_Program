@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Net.NetworkInformation;
 
 // https://www.youtube.com/watch?v=izpntJlcs8o
 // Used the above link to identify the correct references needed for the IP address to be retrieved
@@ -193,6 +194,7 @@ namespace WindowsFormsApp1
             textBox3.Text = "";
             textBox4.Text = "";
             textBox5.Text = "";
+            textBox6.Text = "";
             textBox7.Text = "";
         }
 
@@ -253,7 +255,7 @@ namespace WindowsFormsApp1
 
             // https://www.youtube.com/watch?v=izpntJlcs8o
             // Used the above link to identify the correct code for retrieving and displaying correctly, the systems IP address
-            // // Copyright (c) 2021 Ameer Hamza YouTube (TM) | Code (C#)
+            // Copyright (c) 2021 Ameer Hamza YouTube (TM) | Code (C#)
             // Check IP address
             IPAddress[] ip = Dns.GetHostAddresses(Dns.GetHostName());
             foreach (IPAddress address in ip)
@@ -263,6 +265,33 @@ namespace WindowsFormsApp1
                     textBox5.Text = address.ToString();
                 }
             }
+            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+            String sMacAddress = string.Empty;
+            foreach (NetworkInterface adapter in nics)
+            {
+                if (sMacAddress == String.Empty)
+                {
+                    IPInterfaceProperties properties = adapter.GetIPProperties();
+                    sMacAddress = adapter.GetPhysicalAddress().ToString();
+                }
+            }
+            textBox6.Text = sMacAddress;
+
+            // Retrieving MAC address
+            /*
+            ManagementScope theScope = new ManagementScope("\\\\" + Environment.MachineName + "\\root\\cimv2");
+            ObjectQuery theQuery = new ObjectQuery("SELECT * FROM Win32_NetworkAdapter");
+            ManagementObjectSearcher theSearcher = new ManagementObjectSearcher(theScope, theQuery);
+            ManagementObjectCollection theCollectionOfResults = theSearcher.Get();
+
+            foreach (ManagementObject theCurrentObject in theCollectionOfResults)
+            {
+                if (theCurrentObject["MACAddress"] != null)
+                {
+                    textBox6.Text = theCurrentObject["MACAddress"].ToString();
+                }
+            }*/
+           
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -270,6 +299,11 @@ namespace WindowsFormsApp1
             Form4 formname = new Form4();
             formname.Show();
             this.Hide();
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
