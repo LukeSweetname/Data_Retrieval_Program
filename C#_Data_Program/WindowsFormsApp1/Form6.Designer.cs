@@ -58,12 +58,12 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1255, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(969, 278);
             this.dataGridView1.TabIndex = 66;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1102, 384);
+            this.button4.Location = new System.Drawing.Point(816, 384);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(166, 52);
             this.button4.TabIndex = 65;
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(982, 384);
+            this.button5.Location = new System.Drawing.Point(696, 384);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(114, 52);
             this.button5.TabIndex = 64;
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(431, 9);
+            this.label1.Location = new System.Drawing.Point(283, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(435, 46);
             this.label1.TabIndex = 63;
@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(862, 384);
+            this.button3.Location = new System.Drawing.Point(576, 386);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 52);
             this.button3.TabIndex = 68;
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 450);
+            this.ClientSize = new System.Drawing.Size(996, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);

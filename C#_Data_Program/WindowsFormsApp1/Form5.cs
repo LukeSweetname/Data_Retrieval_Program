@@ -27,11 +27,11 @@ namespace WindowsFormsApp1
             MySqlCommand sqlCmd = new MySqlCommand();
             sqlCmd.Connection = new MySqlConnection(connectionString);
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "SELECT systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails FROM hardwareData WHERE fieldId = ?";
-            MySqlDataAdapter sqlDataAdap1 = new MySqlDataAdapter(sqlCmd);
+            sqlCmd.CommandText = "SELECT systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails FROM hardwareData;";
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
 
             DataTable dtrecord = new DataTable();
-            sqlDataAdap1.Fill(dtrecord);
+            sqlDataAdap.Fill(dtrecord);
             dataGridView1.DataSource = dtrecord;
             
         }

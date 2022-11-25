@@ -29,15 +29,15 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*MySqlCommand sqlCmd = new MySqlCommand();
+            MySqlCommand sqlCmd = new MySqlCommand();
             sqlCmd.Connection = new MySqlConnection(connectionString);
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "SELECT OSname, OSversion, OSmanufacturer FROM softwareData WHERE fieldId = ?";
+            sqlCmd.CommandText = "SELECT OSname, OSversion, OSmanufacturer FROM softwareData";
             MySqlDataAdapter sqlDataAdap1 = new MySqlDataAdapter(sqlCmd);
 
-            DataTable dtrecord1 = new DataTable();
-            sqlDataAdap1.Fill(dtrecord1);
-            dataGridView1.DataSource = dtrecord1;*/
+            DataTable dtrecord = new DataTable();
+            sqlDataAdap1.Fill(dtrecord);
+            dataGridView1.DataSource = dtrecord;
         }
 
         private void button3_Click(object sender, EventArgs e)
