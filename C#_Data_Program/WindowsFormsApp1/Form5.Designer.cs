@@ -59,6 +59,7 @@ namespace WindowsFormsApp1
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,7 +158,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox1.Location = new System.Drawing.Point(127, 317);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 26);
+            this.textBox1.Size = new System.Drawing.Size(340, 26);
             this.textBox1.TabIndex = 63;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -173,7 +174,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox3.Location = new System.Drawing.Point(127, 382);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 26);
+            this.textBox3.Size = new System.Drawing.Size(340, 26);
             this.textBox3.TabIndex = 67;
             // 
             // label5
@@ -189,7 +190,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox4.Location = new System.Drawing.Point(127, 414);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 26);
+            this.textBox4.Size = new System.Drawing.Size(340, 26);
             this.textBox4.TabIndex = 69;
             // 
             // label6
@@ -203,9 +204,9 @@ namespace WindowsFormsApp1
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(476, 318);
+            this.textBox5.Location = new System.Drawing.Point(595, 318);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(217, 26);
+            this.textBox5.Size = new System.Drawing.Size(276, 26);
             this.textBox5.TabIndex = 71;
             // 
             // label7
@@ -221,13 +222,13 @@ namespace WindowsFormsApp1
             // 
             this.textBox2.Location = new System.Drawing.Point(127, 350);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 26);
+            this.textBox2.Size = new System.Drawing.Size(340, 26);
             this.textBox2.TabIndex = 80;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(359, 350);
+            this.label8.Location = new System.Drawing.Point(473, 350);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 20);
             this.label8.TabIndex = 79;
@@ -235,15 +236,15 @@ namespace WindowsFormsApp1
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(476, 350);
+            this.textBox6.Location = new System.Drawing.Point(595, 350);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(217, 26);
+            this.textBox6.Size = new System.Drawing.Size(276, 26);
             this.textBox6.TabIndex = 78;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(360, 382);
+            this.label9.Location = new System.Drawing.Point(474, 382);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 20);
             this.label9.TabIndex = 77;
@@ -251,15 +252,15 @@ namespace WindowsFormsApp1
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(476, 382);
+            this.textBox7.Location = new System.Drawing.Point(595, 382);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(217, 26);
+            this.textBox7.Size = new System.Drawing.Size(276, 26);
             this.textBox7.TabIndex = 76;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(360, 413);
+            this.label10.Location = new System.Drawing.Point(474, 413);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 20);
             this.label10.TabIndex = 75;
@@ -268,22 +269,22 @@ namespace WindowsFormsApp1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(693, 320);
+            this.label11.Location = new System.Drawing.Point(807, 320);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 20);
             this.label11.TabIndex = 74;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(476, 414);
+            this.textBox8.Location = new System.Drawing.Point(595, 414);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(217, 26);
+            this.textBox8.Size = new System.Drawing.Size(276, 26);
             this.textBox8.TabIndex = 73;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(359, 318);
+            this.label12.Location = new System.Drawing.Point(473, 318);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 20);
             this.label12.TabIndex = 72;
@@ -317,11 +318,22 @@ namespace WindowsFormsApp1
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(865, 446);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(114, 52);
+            this.button9.TabIndex = 84;
+            this.button9.Text = "Select";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 568);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -390,5 +402,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
