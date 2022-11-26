@@ -203,5 +203,31 @@ namespace WindowsFormsApp1
             textBox7.Text = dataGridView1.Rows[RowIndex].Cells[7].Value.ToString();
             textBox8.Text = dataGridView1.Rows[RowIndex].Cells[8].Value.ToString();
         }
+      
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlCommand sqlCmd = new MySqlCommand("UPDATE hardwareData SET systemName=@systemName, systemModel=@systemModel, systemManufacturer=@systemManufacturer, systemType=@systemType, systemIPaddress=@systemIPaddress, systemMACAddress=@systemMACAddress, systemPurchaseDate=@systemPurchaseDate, systemExtraDetails=@systemExtraDetails where fieldID = @fieldId", con);
+                con.Open();
+                sqlCmd.Parameters.AddWithValue("@fieldId", fieldId);
+                sqlCmd.Parameters.AddWithValue("@systemName", textBox1.Text);
+                sqlCmd.Parameters.AddWithValue("@systemModel", textBox2.Text);
+                sqlCmd.Parameters.AddWithValue("@systemManufacturer", textBox3.Text);
+                sqlCmd.Parameters.AddWithValue("@systemType", textBox4.Text);
+                sqlCmd.Parameters.AddWithValue("@systemIPaddress", textBox5.Text);
+                sqlCmd.Parameters.AddWithValue("@systemMACAddress", textBox6.Text);
+                sqlCmd.Parameters.AddWithValue("@systemPurchaseDate", textBox7.Text);
+                sqlCmd.Parameters.AddWithValue("@systemExtraDetails", textBox8.Text);
+                sqlCmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated Successfully");
+                con.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please Select a record to Update");
+            }
+        }
     }
 }
