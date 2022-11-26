@@ -19,7 +19,8 @@ using System.Net.NetworkInformation;
 // Used the above link to identify the correct references needed for the IP address to be retrieved
 // Copyright (c) 2021 Ameer Hamza YouTube (TM) | Code (C#)
 
-using MySql.Data.MySqlClient; 
+using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 // https://dev.mysql.com/downloads/windows/visualstudio/ 
 // Used above link to download visual studio/mysql functionality
 
@@ -276,12 +277,15 @@ namespace WindowsFormsApp1
                     sMacAddress = adapter.GetPhysicalAddress().ToString();
                 }
             }
-            string temp = sMacAddress;
-            string[] subs = temp.Split("0, 1 ' '");
-            string finalres = subs[0];
-            textBox1.Text = finalres;
-            break;
-            textBox6.Text = sMacAddress; // This is where I got to, I need to change the formatting of the MAC address result.
+            // giving the variable var temp the value of sMacAddress
+            var temp = sMacAddress;
+
+            var regex = "(.{2})(.{2})(.{2})(.{2})(.{2})(.{2})";
+            var replace = "$1:$2:$3:$4:$5:$6";
+            var newformat = Regex.Replace(temp, regex, replace);
+            
+            // returning new format into textbox 6
+            textBox6.Text = newformat; 
 
             // Retrieving MAC address
             /*
