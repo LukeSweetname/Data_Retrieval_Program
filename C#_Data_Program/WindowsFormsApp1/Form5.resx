@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>To view the data stored on the database, simply click on 'Retrieve from Database'.
-You can then double click on any data entry to edit or delete the data. Once complete, click 'Send back to Database'.</value>
+    <value>To view the data stored on the database, simply click on 'Retrieve from Database'. To edit or delete a specific database entry, make sure it is highlighted, then click 'Select',
+this will populate the text boxes with database data. Once you have edited the data you just need to click 'Update', to see the changes just click 'Retrieve from Database' again.</value>
   </data>
 </root>

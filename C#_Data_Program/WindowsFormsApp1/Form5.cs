@@ -229,5 +229,24 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Please Select a record to Update");
             }
         }
+
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            if (fieldId != 0)
+            {
+                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlCommand sqlCmd = new MySqlCommand("DELETE FROM hardwareData WHERE fieldId = @fieldId", con);
+                con.Open();
+                sqlCmd.Parameters.AddWithValue("@fieldId", fieldId);
+                sqlCmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+                
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
+        }
     }
 }

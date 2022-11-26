@@ -31,10 +31,8 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,10 +54,10 @@ namespace WindowsFormsApp1
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.Updatebtn = new System.Windows.Forms.Button();
+            this.Deletebtn = new System.Windows.Forms.Button();
+            this.Insertbtn = new System.Windows.Forms.Button();
+            this.Selectbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,16 +71,6 @@ namespace WindowsFormsApp1
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(985, 503);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 52);
-            this.button5.TabIndex = 54;
-            this.button5.Text = "Clear Form";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -95,23 +83,13 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(218, 503);
+            this.button2.Location = new System.Drawing.Point(16, 503);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(219, 52);
             this.button2.TabIndex = 37;
             this.button2.Text = "Retrieve from Database";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 503);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 52);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Send back to Database\r\n";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -129,14 +107,14 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 446);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(828, 40);
+            this.label2.Size = new System.Drawing.Size(1236, 40);
             this.label2.TabIndex = 60;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(865, 503);
+            this.button3.Location = new System.Drawing.Point(985, 504);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 52);
             this.button3.TabIndex = 61;
@@ -290,54 +268,55 @@ namespace WindowsFormsApp1
             this.label12.TabIndex = 72;
             this.label12.Text = "IP Address";
             // 
-            // button6
+            // Updatebtn
             // 
-            this.button6.Location = new System.Drawing.Point(444, 503);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 52);
-            this.button6.TabIndex = 81;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.Updatebtn.Location = new System.Drawing.Point(361, 504);
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.Size = new System.Drawing.Size(114, 52);
+            this.Updatebtn.TabIndex = 81;
+            this.Updatebtn.Text = "Update";
+            this.Updatebtn.UseVisualStyleBackColor = true;
+            this.Updatebtn.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // Deletebtn
             // 
-            this.button7.Location = new System.Drawing.Point(564, 503);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(114, 52);
-            this.button7.TabIndex = 82;
-            this.button7.Text = "Delete";
-            this.button7.UseVisualStyleBackColor = true;
+            this.Deletebtn.Location = new System.Drawing.Point(601, 504);
+            this.Deletebtn.Name = "Deletebtn";
+            this.Deletebtn.Size = new System.Drawing.Size(114, 52);
+            this.Deletebtn.TabIndex = 82;
+            this.Deletebtn.Text = "Delete";
+            this.Deletebtn.UseVisualStyleBackColor = true;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
-            // button8
+            // Insertbtn
             // 
-            this.button8.Location = new System.Drawing.Point(684, 503);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(114, 52);
-            this.button8.TabIndex = 83;
-            this.button8.Text = "Insert";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.Insertbtn.Location = new System.Drawing.Point(481, 504);
+            this.Insertbtn.Name = "Insertbtn";
+            this.Insertbtn.Size = new System.Drawing.Size(114, 52);
+            this.Insertbtn.TabIndex = 83;
+            this.Insertbtn.Text = "Insert";
+            this.Insertbtn.UseVisualStyleBackColor = true;
+            this.Insertbtn.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // Selectbtn
             // 
-            this.button9.Location = new System.Drawing.Point(865, 446);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(114, 52);
-            this.button9.TabIndex = 84;
-            this.button9.Text = "Select";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.Selectbtn.Location = new System.Drawing.Point(241, 503);
+            this.Selectbtn.Name = "Selectbtn";
+            this.Selectbtn.Size = new System.Drawing.Size(114, 52);
+            this.Selectbtn.TabIndex = 84;
+            this.Selectbtn.Text = "Select";
+            this.Selectbtn.UseVisualStyleBackColor = true;
+            this.Selectbtn.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 568);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.Selectbtn);
+            this.Controls.Add(this.Insertbtn);
+            this.Controls.Add(this.Deletebtn);
+            this.Controls.Add(this.Updatebtn);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox6);
@@ -360,10 +339,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "Form5";
             this.Text = "Form5";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -375,10 +352,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
@@ -400,9 +375,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button Updatebtn;
+        private System.Windows.Forms.Button Deletebtn;
+        private System.Windows.Forms.Button Insertbtn;
+        private System.Windows.Forms.Button Selectbtn;
     }
 }
