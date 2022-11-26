@@ -39,50 +39,7 @@ namespace WindowsFormsApp1
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*
-            MySqlCommand sqlCmd = new MySqlCommand();
-
-            MySqlConnection con = new MySqlConnection(connectionString);
-            con.Open();
-
-            MySqlDataAdapter sqlDataAdaptor = new MySqlDataAdapter();
-
-            sqlCmd.Connection = new MySqlConnection(connectionString);
-            sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = ("UPDATE hardwareData SET systemName = @systemName, systemModel = @systemModel, systemManufacturer = @systemManufacturer, systemType = @systemType, systemIPaddress = @systemIPaddress, systemMACAddress = @systemMACAddress, systemPurchaseDate = @systemPurchaseDate, systemExtraDetaisl = @systemExtraDetails", con);
-            
-            sqlCmd.Parameters.Add("@systemName", MySqlDbType.VarChar, 255, "systemName");
-            sqlCmd.Parameters.Add("@systemModel", MySqlDbType.VarChar, 255, "systemModel");
-            sqlCmd.Parameters.Add("@systemManufacturer", MySqlDbType.VarChar, 255, "systemManufacturer");
-            sqlCmd.Parameters.Add("@systemType", MySqlDbType.VarChar, 255, "systemType");
-            sqlCmd.Parameters.Add("@systemIPaddress", MySqlDbType.VarChar, 255, "systemIPaddress");
-            sqlCmd.Parameters.Add("@systemMACAddress", MySqlDbType.VarChar, 255, "systemMACAddress");
-            sqlCmd.Parameters.Add("@systemPurchaseDate", MySqlDbType.VarChar, 255, "systemPurchaseDate");
-            sqlCmd.Parameters.Add("@systemExtraDetails", MySqlDbType.Text, ' ', "systemExtraDetails");
-            sqlCmd.ExecuteNonQuery();
-            con.Close();
-
-            
-            ;
-            /*con.Open();
-
-            MySqlCommand sqlCmd = new MySqlCommand();
-            sqlCmd.Connection = new MySqlConnection(connectionString);
-            sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "UPDATE hardwareData SET systemName = ?, systemModel = ?, systemManufacturer = ?, systemType = ?, systemIPaddress = ?, systemPurchaseDate = ?, systemExtraDetails = ? WHERE fieldId = ?;";
-            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
-
-            DataTable dtrecord = new DataTable();
-            sqlDataAdap.Update(dtrecord);
-            dataGridView1.DataSource = dtrecord;
-
-            int rowindex = dataGridView1.CurrentRow.Index;
-            MessageBox.Show(rowindex.ToString());
-
-            con.Close();*/
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
