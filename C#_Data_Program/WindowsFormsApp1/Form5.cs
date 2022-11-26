@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
             MySqlCommand sqlCmd = new MySqlCommand();
             sqlCmd.Connection = new MySqlConnection(connectionString);
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "SELECT fieldId, systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails FROM hardwareData;";
+            sqlCmd.CommandText = "SELECT fieldId, systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemMACAddress, systemPurchaseDate, systemExtraDetails FROM hardwareData;";
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
 
             DataTable dtrecord = new DataTable();

@@ -65,14 +65,17 @@ namespace WindowsFormsApp1
             string systemManufacturer;
             string systemType;
             string systemIPaddress;
+            string systemMACAddress;
             string systemPurchaseDate;
             string systemExtraDetails;
+
 
             systemName = textBox1.Text;
             systemModel = textBox2.Text;
             systemManufacturer = textBox3.Text;
             systemType = textBox4.Text;
             systemIPaddress = textBox5.Text;
+            systemMACAddress = textBox6.Text;
             systemPurchaseDate = dateTimePicker1.Text;
             systemExtraDetails = textBox7.Text;
 
@@ -88,8 +91,8 @@ namespace WindowsFormsApp1
             // Used the above links as inspiration for my database connection for my program. 
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemPurchaseDate, systemExtraDetails)" +
-                "VALUES ('" + systemName + "','" + systemModel + "','" + systemManufacturer + "','" + systemType + "','" + systemIPaddress + "','" + systemPurchaseDate + "','" + systemExtraDetails + "')";
+            cmd.CommandText = "INSERT INTO hardwareData (systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemMACAddress, systemPurchaseDate, systemExtraDetails)" +
+                "VALUES ('" + systemName + "','" + systemModel + "','" + systemManufacturer + "','" + systemType + "','" + systemIPaddress + "','" + systemMACAddress + "','" + systemPurchaseDate + "','" + systemExtraDetails + "')";
             cmd.ExecuteNonQuery();
            
             conn.Close(); // close the connection
