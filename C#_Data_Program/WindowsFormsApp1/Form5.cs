@@ -14,12 +14,15 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
+        string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
+        int ID = 0;
+
         public Form5()
         {
             InitializeComponent();
         }
 
-        string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -38,7 +41,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            /*
             MySqlCommand sqlCmd = new MySqlCommand();
 
             MySqlConnection con = new MySqlConnection(connectionString);
@@ -150,6 +153,33 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlCommand sqlCmd = new MySqlCommand("INSERT into hardwareData(systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemMACAddress, systemPurchaseDate, systemExtraDetails)" +
+                    "VALUES(@systemName, @systemModel, @systemManufacturer, @systemType, @systemIPaddress, @systemMACAddress, @systemPurchaseDate, @systemExtraDetails)", con);
+                con.Open();
+                sqlCmd.Parameters.AddWithValue("@systemName", textBox1.Text);
+                sqlCmd.Parameters.AddWithValue("@systemModel", textBox2.Text);
+                sqlCmd.Parameters.AddWithValue("@systemManufacturer", textBox3.Text);
+                sqlCmd.Parameters.AddWithValue("@systemType", textBox4.Text);
+                sqlCmd.Parameters.AddWithValue("@systemIPaddress", textBox5.Text);
+                sqlCmd.Parameters.AddWithValue("@systemMACAddress", textBox6.Text);
+                sqlCmd.Parameters.AddWithValue("@systemPurchaseDate", textBox7.Text);
+                sqlCmd.Parameters.AddWithValue("@systemExtraDetails", textBox8.Text);
+                sqlCmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Provide Details");
+            }
 
         }
     }

@@ -56,6 +56,9 @@ namespace WindowsFormsApp1
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,7 +171,7 @@ namespace WindowsFormsApp1
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 413);
+            this.textBox3.Location = new System.Drawing.Point(127, 382);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(217, 26);
             this.textBox3.TabIndex = 67;
@@ -184,7 +187,7 @@ namespace WindowsFormsApp1
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 382);
+            this.textBox4.Location = new System.Drawing.Point(127, 414);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(217, 26);
             this.textBox4.TabIndex = 69;
@@ -200,7 +203,7 @@ namespace WindowsFormsApp1
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(127, 350);
+            this.textBox5.Location = new System.Drawing.Point(476, 318);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(217, 26);
             this.textBox5.TabIndex = 71;
@@ -216,7 +219,7 @@ namespace WindowsFormsApp1
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(476, 350);
+            this.textBox2.Location = new System.Drawing.Point(127, 350);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(217, 26);
             this.textBox2.TabIndex = 80;
@@ -232,7 +235,7 @@ namespace WindowsFormsApp1
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(476, 382);
+            this.textBox6.Location = new System.Drawing.Point(476, 350);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(217, 26);
             this.textBox6.TabIndex = 78;
@@ -248,7 +251,7 @@ namespace WindowsFormsApp1
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(476, 414);
+            this.textBox7.Location = new System.Drawing.Point(476, 382);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(217, 26);
             this.textBox7.TabIndex = 76;
@@ -272,7 +275,7 @@ namespace WindowsFormsApp1
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(476, 318);
+            this.textBox8.Location = new System.Drawing.Point(476, 414);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(217, 26);
             this.textBox8.TabIndex = 73;
@@ -286,11 +289,42 @@ namespace WindowsFormsApp1
             this.label12.TabIndex = 72;
             this.label12.Text = "IP Address";
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(444, 503);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(114, 52);
+            this.button6.TabIndex = 81;
+            this.button6.Text = "Update";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(564, 503);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(114, 52);
+            this.button7.TabIndex = 82;
+            this.button7.Text = "Delete";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(684, 503);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(114, 52);
+            this.button8.TabIndex = 83;
+            this.button8.Text = "Insert";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 568);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox6);
@@ -353,5 +387,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
