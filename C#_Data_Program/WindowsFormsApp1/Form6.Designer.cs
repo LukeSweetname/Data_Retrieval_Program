@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(13, 402);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(807, 80);
+            this.label13.Size = new System.Drawing.Size(991, 60);
             this.label13.TabIndex = 88;
             this.label13.Text = resources.GetString("label13.Text");
             // 
