@@ -117,4 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>To retrieve asset hardware data click 'Check Hardware', if appropriate, you can add extra details in the 'Extra Data' text box,
+you can also add the date in which the hardware was purchased. Then, to send the data to the database simply click 'Add to Database'.
+</value>
+  </data>
 </root>
