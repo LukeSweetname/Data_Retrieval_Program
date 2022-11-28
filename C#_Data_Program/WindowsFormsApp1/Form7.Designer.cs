@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -52,6 +53,10 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -60,7 +65,7 @@ namespace WindowsFormsApp1
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 32);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
@@ -70,7 +75,7 @@ namespace WindowsFormsApp1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(641, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(641, 32);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -80,7 +85,7 @@ namespace WindowsFormsApp1
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(325, 424);
+            this.dataGridView3.Location = new System.Drawing.Point(16, 414);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 62;
             this.dataGridView3.RowTemplate.Height = 28;
@@ -89,17 +94,17 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 168);
+            this.button1.Location = new System.Drawing.Point(12, 188);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 47);
+            this.button1.Size = new System.Drawing.Size(203, 47);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Retrieve Hardware";
+            this.button1.Text = "Retrieve Hardware Assets";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(175, 168);
+            this.button2.Location = new System.Drawing.Point(221, 188);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 47);
             this.button2.TabIndex = 5;
@@ -109,17 +114,17 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(641, 168);
+            this.button3.Location = new System.Drawing.Point(641, 188);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 47);
+            this.button3.Size = new System.Drawing.Size(199, 47);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Retrieve Software";
+            this.button3.Text = "Retrieve Software Assets";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(804, 168);
+            this.button4.Location = new System.Drawing.Point(846, 188);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(157, 47);
             this.button4.TabIndex = 7;
@@ -129,7 +134,7 @@ namespace WindowsFormsApp1
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 527);
+            this.button5.Location = new System.Drawing.Point(943, 572);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(157, 47);
             this.button5.TabIndex = 8;
@@ -139,7 +144,7 @@ namespace WindowsFormsApp1
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1106, 527);
+            this.button6.Location = new System.Drawing.Point(1106, 572);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(157, 47);
             this.button6.TabIndex = 9;
@@ -149,7 +154,7 @@ namespace WindowsFormsApp1
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(325, 371);
+            this.button7.Location = new System.Drawing.Point(16, 570);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(186, 47);
             this.button7.TabIndex = 10;
@@ -159,42 +164,42 @@ namespace WindowsFormsApp1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 222);
+            this.textBox1.Location = new System.Drawing.Point(13, 242);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 26);
             this.textBox1.TabIndex = 11;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(13, 286);
+            this.textBox3.Location = new System.Drawing.Point(13, 306);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(319, 26);
             this.textBox3.TabIndex = 12;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 254);
+            this.textBox2.Location = new System.Drawing.Point(13, 274);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(319, 26);
             this.textBox2.TabIndex = 13;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(641, 254);
+            this.textBox5.Location = new System.Drawing.Point(641, 274);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(319, 26);
             this.textBox5.TabIndex = 16;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(641, 286);
+            this.textBox6.Location = new System.Drawing.Point(641, 306);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(319, 26);
             this.textBox6.TabIndex = 15;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(641, 222);
+            this.textBox4.Location = new System.Drawing.Point(641, 242);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(319, 26);
             this.textBox4.TabIndex = 14;
@@ -202,7 +207,7 @@ namespace WindowsFormsApp1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(339, 222);
+            this.label1.Location = new System.Drawing.Point(339, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 17;
@@ -211,7 +216,7 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(339, 286);
+            this.label2.Location = new System.Drawing.Point(339, 306);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 18;
@@ -220,7 +225,7 @@ namespace WindowsFormsApp1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(339, 254);
+            this.label3.Location = new System.Drawing.Point(339, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 19;
@@ -229,7 +234,7 @@ namespace WindowsFormsApp1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(966, 254);
+            this.label4.Location = new System.Drawing.Point(966, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 22;
@@ -238,7 +243,7 @@ namespace WindowsFormsApp1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(966, 286);
+            this.label5.Location = new System.Drawing.Point(966, 306);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 21;
@@ -247,7 +252,7 @@ namespace WindowsFormsApp1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(966, 222);
+            this.label6.Location = new System.Drawing.Point(966, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 20);
             this.label6.TabIndex = 20;
@@ -255,7 +260,7 @@ namespace WindowsFormsApp1
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(605, 371);
+            this.button8.Location = new System.Drawing.Point(296, 570);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(342, 47);
             this.button8.TabIndex = 23;
@@ -263,11 +268,51 @@ namespace WindowsFormsApp1
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 20);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Hardware Assets";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(637, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 20);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Software Assets";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(16, 388);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 20);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Linked Assets";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(641, 349);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(550, 200);
+            this.label10.TabIndex = 27;
+            this.label10.Text = resources.GetString("label10.Text");
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 586);
+            this.ClientSize = new System.Drawing.Size(1275, 631);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -326,5 +371,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

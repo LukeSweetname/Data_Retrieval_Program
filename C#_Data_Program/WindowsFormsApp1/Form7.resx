@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label10.Text" xml:space="preserve">
+    <value>To link a software asset to a hardware asset, follow these simple steps;
+Click on 'Retrieve Hardware Assets' and 'Retrieve Software Assets'
+
+Highlight both the hardware asset and software asset that you wish to link
+and click 'Select Hardware' and 'Select Software' respectively.
+
+Next, click 'Link Selected Hardware and Software Assets', this will add unique
+identifiers of both hardware and software assets to a new table.
+
+To view all Linked assets click 'Retrieve Linked Assets'.</value>
+  </data>
 </root>
