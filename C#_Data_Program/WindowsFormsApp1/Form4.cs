@@ -80,5 +80,17 @@ namespace WindowsFormsApp1
             formname.Show();
             this.Hide();
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Form7 formname = new Form7();
+            formname.Show();
+            this.Hide();
+        }
     }
 }
