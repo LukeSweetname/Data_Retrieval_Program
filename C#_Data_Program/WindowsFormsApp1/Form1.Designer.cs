@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -263,11 +264,22 @@ namespace WindowsFormsApp1
             this.label3.TabIndex = 38;
             this.label3.Text = resources.GetString("label3.Text");
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(379, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(212, 100);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "To return to the main menu,\r\nclick \'Return to Menu.\r\n\r\nTo entirely leave the prog" +
+    "ram\r\nclick \'Exit\'.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 530);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox6);
@@ -325,6 +337,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
