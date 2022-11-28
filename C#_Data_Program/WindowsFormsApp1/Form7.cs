@@ -93,5 +93,38 @@ namespace WindowsFormsApp1
             textBox5.Text = dataGridView1.Rows[RowIndex].Cells[1].Value.ToString();
             textBox6.Text = dataGridView1.Rows[RowIndex].Cells[2].Value.ToString();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            MySqlCommand sqlCmd = new MySqlCommand();
+            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.CommandType = CommandType.Text;
+            sqlCmd.CommandText = "SELECT id, Hardwareid, Softwareid FROM LinkTable;";
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
+
+            DataTable dtrecord = new DataTable();
+            sqlDataAdap.Fill(dtrecord);
+            dataGridView3.DataSource = dtrecord;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && (textBox4.Text != ""))
+            {
+                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlCommand sqlCmd = new MySqlCommand("INSERT into LinkTable(Hardwareid, Softwareid)" +
+                    "VALUES(@systemName, @OSName)", con);
+                con.Open();
+                sqlCmd.Parameters.AddWithValue("@systemName", textBox2.Text);
+                sqlCmd.Parameters.AddWithValue("@OSName", textBox5.Text);
+                sqlCmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Inserted Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Provide Details");
+            }
+        }
     }
 }

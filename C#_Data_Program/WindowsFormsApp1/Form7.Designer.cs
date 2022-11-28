@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -154,6 +155,7 @@ namespace WindowsFormsApp1
             this.button7.TabIndex = 10;
             this.button7.Text = "Retrieve Linked Assets";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // textBox1
             // 
@@ -251,11 +253,22 @@ namespace WindowsFormsApp1
             this.label6.TabIndex = 20;
             this.label6.Text = "ID";
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(605, 371);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(342, 47);
+            this.button8.TabIndex = 23;
+            this.button8.Text = "Link Selected Hardware and Software Assets";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1275, 586);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -312,5 +325,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button8;
     }
 }
