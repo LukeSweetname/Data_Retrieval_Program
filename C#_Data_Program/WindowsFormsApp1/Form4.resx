@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>This is the main menu of the Data Retrieval Program
+
+Hardware And Software
+-Add - Allows the user to add asset data to a database
+-View/Edit/Delete - Allows the user to retrieve asset data from the database this data can be individually viewed,
+edited or deleted from the database.
+Link Hardware/Software
+-View/Link - View Hardware and Software assets, select them and link them in a database</value>
+  </data>
 </root>
