@@ -280,7 +280,7 @@ namespace WindowsFormsApp1
             // 
             // Deletebtn
             // 
-            this.Deletebtn.Location = new System.Drawing.Point(601, 504);
+            this.Deletebtn.Location = new System.Drawing.Point(481, 504);
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Size = new System.Drawing.Size(114, 52);
             this.Deletebtn.TabIndex = 82;
@@ -290,7 +290,7 @@ namespace WindowsFormsApp1
             // 
             // Insertbtn
             // 
-            this.Insertbtn.Location = new System.Drawing.Point(481, 504);
+            this.Insertbtn.Location = new System.Drawing.Point(865, 504);
             this.Insertbtn.Name = "Insertbtn";
             this.Insertbtn.Size = new System.Drawing.Size(114, 52);
             this.Insertbtn.TabIndex = 83;
