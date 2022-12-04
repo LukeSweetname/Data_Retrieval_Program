@@ -28,7 +28,7 @@ namespace WebApiClient
             }
         }
         */
-        public class Product
+        public class APIData
         {
             public string id { get; set; }
             // id
@@ -44,6 +44,8 @@ namespace WebApiClient
             // exploitabilityscore
             public string impactScore { get; set; }
             // impactscore
+
+            
         }
         static async Task Main(string[] args)
         {
