@@ -5,17 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace WindowsFormsApp1.connection_class
+namespace WindowsFormsApp1
 {
-    public class connection_string
+    class connection_string
     {
-        public static string Conn()
+        public class Utils
         {
-            string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
-            return connectionString;
+            private static string connectionString = "server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6";
 
+            public static string ConnectionString
+            {
+                get
+                {
+                    return connectionString;
+                }
+                set
+                {
+                    connectionString = value;
+                }
+            }
         }
-        //string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
-        //return connection_string;
     }
 }

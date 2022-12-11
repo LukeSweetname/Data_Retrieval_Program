@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using WindowsFormsApp1.connection_class;
+using static WindowsFormsApp1.connection_string;
 
 namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
-        string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
+        string connection_string = Utils.ConnectionString;
+        //string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
         int fieldId = 0;
 
         public Form5()
@@ -28,7 +29,7 @@ namespace WindowsFormsApp1
         {
 
             MySqlCommand sqlCmd = new MySqlCommand();
-            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.Connection = new MySqlConnection(connection_string);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "SELECT fieldId, systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemMACAddress, systemPurchaseDate, systemExtraDetails FROM hardwareData;";
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
@@ -117,7 +118,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text != "")
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("INSERT into hardwareData(systemName, systemModel, systemManufacturer, systemType, systemIPaddress, systemMACAddress, systemPurchaseDate, systemExtraDetails)" +
                     "VALUES(@systemName, @systemModel, @systemManufacturer, @systemType, @systemIPaddress, @systemMACAddress, @systemPurchaseDate, @systemExtraDetails)", con);
                 con.Open();
@@ -165,7 +166,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text != "")
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("UPDATE hardwareData SET systemName=@systemName, systemModel=@systemModel, systemManufacturer=@systemManufacturer, systemType=@systemType, systemIPaddress=@systemIPaddress, systemMACAddress=@systemMACAddress, systemPurchaseDate=@systemPurchaseDate, systemExtraDetails=@systemExtraDetails where fieldID = @fieldId", con);
                 con.Open();
                 sqlCmd.Parameters.AddWithValue("@fieldId", fieldId);
@@ -191,7 +192,7 @@ namespace WindowsFormsApp1
         {
             if (fieldId != 0)
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("DELETE FROM hardwareData WHERE fieldId = @fieldId", con);
                 con.Open();
                 sqlCmd.Parameters.AddWithValue("@fieldId", fieldId);
