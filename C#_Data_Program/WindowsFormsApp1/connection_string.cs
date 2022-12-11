@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     class connection_string
     {
         public class Utils
-        {
+        {   // connection string
             private static string connectionString = "server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6";
 
             public static string ConnectionString

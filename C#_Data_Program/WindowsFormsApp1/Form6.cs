@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static WindowsFormsApp1.connection_string;
+
 namespace WindowsFormsApp1
 {
     public partial class Form6 : Form
