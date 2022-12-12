@@ -12,12 +12,12 @@ using static WindowsFormsApp1.connection_string;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form5 : Form
+    public partial class hardware_change : Form
     {
         string connection_string = Utils.ConnectionString;
         int fieldId = 0;
 
-        public Form5()
+        public hardware_change()
         {
             InitializeComponent();
         }
@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 formname = new Form4();
+            main_menu formname = new main_menu();
             formname.Show();
             this.Hide();
         }

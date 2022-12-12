@@ -14,11 +14,11 @@ using static WindowsFormsApp1.connection_string;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form7 : Form
+    public partial class link_form : Form
     {
         int fieldId = 0;
         string connection_string = Utils.ConnectionString;
-        public Form7()
+        public link_form()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form4 formname = new Form4();
+            main_menu formname = new main_menu();
             formname.Show();
             this.Hide();
         }

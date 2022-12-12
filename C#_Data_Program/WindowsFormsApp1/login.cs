@@ -12,10 +12,10 @@ using static WindowsFormsApp1.connection_string;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class login : Form
     {
         string connection_string = Utils.ConnectionString;
-        public Form2()
+        public login()
         {
             InitializeComponent();
         }
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
                     if (BCrypt.Net.BCrypt.Verify(passwordField.Text, reader.GetString(0)))
                     {
                         // Direct to main page
-                        Form4 formname = new Form4();
+                        main_menu formname = new main_menu();
                         formname.Show();
                         this.Hide();
                         // Clear text boxes

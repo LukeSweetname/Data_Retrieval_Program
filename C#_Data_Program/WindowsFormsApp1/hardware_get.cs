@@ -39,10 +39,10 @@ using static WindowsFormsApp1.connection_string;
 // Used the above links as general inspiration for the project
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class hardware_get : Form
     {
         string connection_string = Utils.ConnectionString;
-        public Form1()
+        public hardware_get()
         {
             InitializeComponent();
         }
@@ -306,7 +306,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 formname = new Form4();
+            main_menu formname = new main_menu();
             formname.Show();
             this.Hide();
         }

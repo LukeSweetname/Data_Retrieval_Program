@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class main_menu : Form
     {
-        public Form4()
+        public main_menu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form3 formname = new Form3();
+            software_get formname = new software_get();
             formname.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var myForm = new Form1();
+            var myForm = new hardware_get();
             myForm.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Form1 formname = new Form1();
+            hardware_get formname = new hardware_get();
             formname.Show();
             this.Hide();
         }
@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form5 formname = new Form5();
+            hardware_change formname = new hardware_change();
             formname.Show();
             this.Hide();
         }
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Form7 formname = new Form7();
+            link_form formname = new link_form();
             formname.Show();
             this.Hide();
         }

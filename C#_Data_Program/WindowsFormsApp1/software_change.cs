@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            Form4 formname = new Form4();
+            main_menu formname = new main_menu();
             formname.Show();
             this.Hide();
         }
