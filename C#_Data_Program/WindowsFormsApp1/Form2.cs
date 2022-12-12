@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static WindowsFormsApp1.connection_string;
 
 namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
+        string connection_string = Utils.ConnectionString;
         public Form2()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server= lochnagar.abertay.ac.uk; database= sql2202448; username = sql2202448; password = Fz2ggjKkinH6");
+            MySqlConnection con = new MySqlConnection(connection_string);
             con.Open();
             MySqlCommand cmd = new MySqlCommand("select passWord from user2 where userName = '" + usernameField.Text + "'", con);
             MySqlDataReader reader = cmd.ExecuteReader();

@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class Form6 : Form
     {
         int fieldId = 0;
-        string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
+        string connection_string = Utils.ConnectionString;
 
         public Form6()
         {
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         private void button2_Click_1(object sender, EventArgs e)
         {
             MySqlCommand sqlCmd = new MySqlCommand();
-            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.Connection = new MySqlConnection(connection_string);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "SELECT fieldId, OSname, OSversion, OSmanufacturer FROM softwareData";
             MySqlDataAdapter sqlDataAdap1 = new MySqlDataAdapter(sqlCmd);
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text != "")
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("UPDATE softwareData SET OSName=@OSName, OSVersion=@OSVersion, OSManufacturer=@OSManufacturer where fieldID = @fieldId", con);
                 con.Open();
                 sqlCmd.Parameters.AddWithValue("@fieldId", fieldId);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text != "")
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("INSERT into softwareData(OSName, OSVersion, OSManufacturer)" +
                     "VALUES(@OSName, @OSVersion, @OSManufacturer)", con);
                 con.Open();
@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
         {
             if (fieldId != 0)
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("DELETE FROM softwareData WHERE fieldId = @fieldId", con);
                 con.Open();
                 sqlCmd.Parameters.AddWithValue("@fieldId", fieldId);

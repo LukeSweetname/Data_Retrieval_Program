@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
     public partial class Form5 : Form
     {
         string connection_string = Utils.ConnectionString;
-        //string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
         int fieldId = 0;
 
         public Form5()

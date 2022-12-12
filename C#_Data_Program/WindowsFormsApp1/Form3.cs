@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static WindowsFormsApp1.connection_string;
 //using System.Collections;
 
 
@@ -16,6 +17,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
+        string connection_string = Utils.ConnectionString;
         public Form3()
         {
             InitializeComponent();
@@ -93,13 +95,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string server = "lochnagar.abertay.ac.uk";
-            string database = "sql2202448";
-            string username = "sql2202448";
-            string password = "Fz2ggjKkinH6";
-            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "USERNAME=" + username + ";" + "PASSWORD=" + password + ";";
 
-            MySqlConnection conn = new MySqlConnection(constring);
+            MySqlConnection conn = new MySqlConnection(connection_string);
             // https://learn.microsoft.com/en-us/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection
             // Copyright (c) Microsoft (TM) forums 2022 | Code (C#)
             // Used the above code to troubleshoot errors with the database connection

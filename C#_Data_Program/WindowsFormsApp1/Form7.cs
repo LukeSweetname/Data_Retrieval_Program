@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
     public partial class Form7 : Form
     {
         int fieldId = 0;
-        string connectionString = "server=lochnagar.abertay.ac.uk;user id=sql2202448;password=Fz2ggjKkinH6;database=sql2202448";
+        string connection_string = Utils.ConnectionString;
         public Form7()
         {
             InitializeComponent();
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlCommand sqlCmd = new MySqlCommand();
-            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.Connection = new MySqlConnection(connection_string);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "SELECT fieldId, systemName, systemModel FROM hardwareData;";
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             MySqlCommand sqlCmd = new MySqlCommand();
-            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.Connection = new MySqlConnection(connection_string);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "SELECT fieldId, OSname, OSversion FROM softwareData";
             MySqlDataAdapter sqlDataAdap1 = new MySqlDataAdapter(sqlCmd);
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
         private void button7_Click(object sender, EventArgs e)
         {
             MySqlCommand sqlCmd = new MySqlCommand();
-            sqlCmd.Connection = new MySqlConnection(connectionString);
+            sqlCmd.Connection = new MySqlConnection(connection_string);
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "SELECT id, Hardwareid, Softwareid FROM LinkTable;";
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(sqlCmd);
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text != "" && (textBox4.Text != ""))
             {
-                MySqlConnection con = new MySqlConnection(connectionString);
+                MySqlConnection con = new MySqlConnection(connection_string);
                 MySqlCommand sqlCmd = new MySqlCommand("INSERT into LinkTable(Hardwareid, Softwareid)" +
                     "VALUES(@systemName, @OSName)", con);
                 con.Open();

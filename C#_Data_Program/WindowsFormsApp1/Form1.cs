@@ -21,6 +21,7 @@ using System.Net.NetworkInformation;
 
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using static WindowsFormsApp1.connection_string;
 // https://dev.mysql.com/downloads/windows/visualstudio/ 
 // Used above link to download visual studio/mysql functionality
 
@@ -40,6 +41,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        string connection_string = Utils.ConnectionString;
         public Form1()
         {
             InitializeComponent();
@@ -47,13 +49,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e) // adding database link
         {
-            string server = "lochnagar.abertay.ac.uk";
-            string database = "sql2202448";
-            string username = "sql2202448";
-            string password = "Fz2ggjKkinH6";
-            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "USERNAME=" + username + ";" + "PASSWORD=" + password + ";";
-
-            MySqlConnection conn = new MySqlConnection(constring);
+            
+            MySqlConnection conn = new MySqlConnection(connection_string);
             // https://learn.microsoft.com/en-us/troubleshoot/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection
             // Copyright (c) Microsoft (TM) forums 2022 | Code (C#)
             // Used the above code to troubleshoot errors with the database connection
